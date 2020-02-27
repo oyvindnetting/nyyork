@@ -14,6 +14,6 @@ export const LayoutWrapper = styled.div`
     border: 1px solid black;
     margin: 0 auto;
     position: relative;
-    background-color: $beige;
+    background-color:  ${props => (props.theme.beige)};
 
 `;

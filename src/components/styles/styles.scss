@@ -2,9 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
-@import 'mixins/colors', 
-        'mixins/mixins';
 
+@import 'mixins', 'colors';
 
 html, body {
     height: 100%;
@@ -81,7 +80,7 @@ header {
         .nav-item {
             .nav-link  {
                 font-family: 'Poppins', 'Open Sans', Arial, Helvetica, sans-serif;
-                font-weight: 800;
+                font-weight: 500;
                 font-size: 2.2rem;
                 @include stroke(1, $yellow);
                 color: $gray !important;
@@ -91,7 +90,9 @@ header {
 
                 &:hover {
                     color: $yellow !important;
+                    font-weight: 800;
                     @include stroke(0, $yellow);
+       
                     letter-spacing: 1px;
                   
                 }
@@ -199,3 +200,162 @@ footer {
         padding: 20px;
     }
 }
+
+
+/* SECTION STYLES */
+
+section#frontpage02 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1200px){
+        flex-direction: column;
+        align-items: center;
+        width: 100%;  
+        height: 100%;
+        margin-bottom: 100px;
+    }
+}
+
+section#frontpage03 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+section#frontpage04{
+    background-color: $pink;
+    padding-bottom: 50px;
+    width: 100%;
+    margin: 100px 0;
+    padding: 0px 0 150px 0;
+
+}
+
+section#frontpage05 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+section#frontpage06 {
+
+    background-color: $gray;
+    margin-bottom: 100px;
+}
+
+
+article {
+    background-color: $gray;
+    display: flex;
+    flex-direction: row;
+    @media screen and (max-width: 415px) {
+        flex-direction: column;
+    }
+}
+
+section#wear02 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1200px){
+        flex-direction: column;
+        align-items: center;
+        width: 100%;  
+        height: 100%;
+        margin-bottom: 100px;
+    }
+}
+
+section#wear03 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1200px){
+        flex-direction: column;
+        align-items: center;
+        width: 100%;  
+        height: 100%;
+        margin-bottom: 100px;
+    }
+}
+
+
+section#wear04 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+section#wear05 {
+    background-color: $pink;
+    padding-bottom: 50px;
+    width: 100%;
+    margin: 100px 0;
+    padding: 0px 0 150px 0;
+
+}
+section#wear06 {
+
+    background-color: $gray;
+    margin-bottom: 100px;
+}
+
+
+section#jeans02 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1200px){
+        flex-direction: column;
+        align-items: center;
+        width: 100%;  
+        height: 100%;
+        margin-bottom: 100px;
+    }
+}
+
+section#jeans03 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1200px){
+        flex-direction: column;
+        align-items: center;
+        width: 100%;  
+        height: 100%;
+        margin-bottom: 100px;
+    }
+}
+
+
+section#jeans04 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+section#jeans05 {
+    background-color: $gray;
+    padding-bottom: 50px;
+    width: 100%;
+    margin: 100px 0;
+    padding: 0px 0 150px 0;
+
+}
+section#jeans06 {
+
+    background-color: $gray;
+    margin-bottom: 100px;
+}
+
+
+

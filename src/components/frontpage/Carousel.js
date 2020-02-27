@@ -1,7 +1,12 @@
-import React, { useStaticQuery } from 'react';
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+import { CarouselWrapper } from './styles/CarouselWrapper';
 
 
-const Carousel = () => {
+
+const ImageCarousel = ({theme}) => {
     const {
         slides: { edges: slides },
       } = useStaticQuery(graphql`
@@ -11,6 +16,8 @@ const Carousel = () => {
               node {
                 id
                 acf {
+                  tittel
+                  undertittel
                   bilde {
                     id
                     localFile {
@@ -26,15 +33,28 @@ const Carousel = () => {
             }
           }
         } 
-      `)
+      `);
       return (
-        <>
-           {slides.map((slide, i) => (
-            <img src={slide.node.acf.bilde.localFile.childImageSharp.fluid.srcWebp} />
-           
-          ))}
-        </>
+        <CarouselWrapper theme={theme}>
+          <Carousel showThumbs={false} showArrows={true} showStatus={true} infiniteLoop={true} autoPlay={true} interval={5000}>
+            {slides.map((slide, i) => (
+              <div>
+                <img src={slide.node.acf.bilde.localFile.childImageSharp.fluid.srcWebp} />
+                <div class="overlay">
+                    <h1>{slide.node.acf.tittel}</h1>
+                    <div class="content">
+                      {slide.node.acf.undertittel}
+                    </div>
+                </div>
+              </div>
+            ))}
+  
+          </Carousel>
+        </CarouselWrapper>
+
+
       );
 }
 
-export default Carousel;
+export default ImageCarousel;
+

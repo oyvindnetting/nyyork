@@ -1,17 +1,29 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap-grid.css';
-import { graphql, useStaticQuery } from 'gatsby';
 
 import { LayoutWrapper } from './styles/LayoutWrapper';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import styled from 'styled-components';
+
+import nyYorkColors from './constants/colors';
 
 
-const Layout = () => {
+
+const Primary = styled.main`
+  padding: 0;
+`;
+
+const Layout = ({children}) => {
   return (
     <>
-      <LayoutWrapper>
-        <Header />
+      <LayoutWrapper theme={nyYorkColors}>
+        <Header theme={nyYorkColors}  />
+        <Primary id="primary" className="content-area" >
+          <main id="main" className="site-main" role="main" >
+            {children}
+          </main>
+        </Primary>
         <Footer />
       </LayoutWrapper>
     </>

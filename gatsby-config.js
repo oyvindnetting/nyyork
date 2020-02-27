@@ -31,7 +31,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-wordpress',
       options: {
-        includedRoutes: ["/*/*/posts", "/*/*/pages", "/*/*/media", '/*/*/acf'],
+        includedRoutes: ["/*/*/posts", "/*/*/media", '/*/*/acf'],
         baseUrl: 'nyyork.test',
         protocol: 'http',
         hostingWPCOM: false,
@@ -41,6 +41,20 @@ module.exports = {
           replacementUrl: '',
         },
       },
+    },
+    {
+      resolve: 'gatsby-source-instagram',
+        options: {
+          username: 'vintagewearbyny',
+        },
+    },
+    `gatsby-plugin-favicon`,
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: "./src/favicon.png",
+  
+      }
     },
     'gatsby-plugin-styled-components',
     {
