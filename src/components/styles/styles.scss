@@ -81,7 +81,7 @@ header {
             .nav-link  {
                 font-family: 'Poppins', 'Open Sans', Arial, Helvetica, sans-serif;
                 font-weight: 500;
-                font-size: 2.2rem;
+                font-size: 2.3rem;
                 @include stroke(1, $yellow);
                 color: $gray !important;
                 border: 10px solid $gray;
@@ -90,16 +90,14 @@ header {
 
                 &:hover {
                     color: $yellow !important;
-                    font-weight: 800;
+
                     @include stroke(0, $yellow);
-       
-                    letter-spacing: 1px;
                   
                 }
             }
  
-            &.active {
-                .nav-link  {
+            .nav-link  {
+                &.nav-active {
                     color: $yellow !important;
                     @include stroke(0, $yellow);
                     background-color: $pink;
@@ -115,9 +113,11 @@ header {
     div.shopping_english {
         position: absolute;
         top:20px;
-        right: 30px;
-        width: 70px;
+        right: 35px;
+        width: 50px;
         height: 50px;
+
+        
 
         @media screen and (max-width: 415px) {
             top:110px;
@@ -128,13 +128,23 @@ header {
             display: inline;
 
             img {
-                max-width: 30px;
+                max-width: 50px;
                 transition: transform 0.5s;
                 &:hover {
                     transform: scale(1.15); 
                 }
             }
-        
+            a.nav-active {
+                
+                    color: $yellow !important;
+            
+                    background-color: $pink;
+                    padding: 10px 5px 14px 5px;
+    
+                    border-radius: 5px;
+                    border: 4px solid $yellow;
+
+            }
         }
     }
 }
@@ -357,5 +367,58 @@ section#jeans06 {
     margin-bottom: 100px;
 }
 
+section#omoss02 {
+    div.who_we_are_background {
+        width: 100%;
+        div.content {
+            div {
+                font-size: 1.2rem;
+            }
+            
+        }
+        div.image {
+            img {
+                max-width: 450px;
+                @media screen and (max-width: 415px) {
+                    max-width: 320px;
+                }
+            }
+        }
+    }
 
+}
 
+section#omoss03 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+section#omoss05 {
+    font-family: 'Poppins', 'Open Sans', Arial, Helvetica, sans-serif;
+    margin-bottom: 100px;
+    
+    h2 {
+        width: 100%;
+        text-align: center;
+        font-weight: 700;
+        font-size: 2.8rem;
+        color: $pink;
+        margin-bottom: 30px;
+
+    }
+}
+
+section#omoss06 {
+    font-family: 'Poppins', 'Open Sans', Arial, Helvetica, sans-serif;
+
+    h2 {
+        color: $pink;
+        width: 100%;
+        font-size: 2.7rem;
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 30px;
+
+    }
+}

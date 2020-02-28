@@ -1,8 +1,8 @@
 import React from 'react';
 import { WhereIsWrapper } from './styles/WhereIsWrapper'
 
-const WhereIs = ({theme}) => (
-    <WhereIsWrapper theme={theme}>
+const WhereIs = () => (
+    <WhereIsWrapper >
         <div className="where_is_background">
             <div className="content">
                 <h2>HVOR LIGGER NY YORK?</h2>

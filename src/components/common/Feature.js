@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-
+import PropTypes from 'prop-types';
 import { FeatureWrapper } from './styles/FeatureWrapper';
 
 import FeatureImage from '../../images/feature_image2.jpg';
@@ -40,7 +40,12 @@ const Feature = ({color, bgColor}) => {
     </FeatureWrapper>
     );
 }
-    
+     
+
+Feature.propTypes = {
+    color: PropTypes.string,
+    bgColor: PropTypes.string
+}
 
 
 export default Feature;

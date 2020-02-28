@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import bgImage from '../../../images/who_we_are_background.png';
 import bgImagePink from '../../../images/who_we_are_background_pink.png';
 
-
+import nyYorkColors from '../../constants/colors';
 
 export const WhoWeAreWrapper = styled.div`
 
@@ -26,8 +26,8 @@ export const WhoWeAreWrapper = styled.div`
 
         @media screen and (max-width: 415px){
             flex-direction: column-reverse;
-            background-color: $gray;
-            border: 3px solid $yellow;
+            background-color: ${nyYorkColors.gray};
+            border: 3px solid ${nyYorkColors.yellow};
             text-align: center;
          
         }
@@ -36,15 +36,15 @@ export const WhoWeAreWrapper = styled.div`
             padding: 25px 30px;
             h2 {
                 font-family: 'Poppins', 'Open Sans', Arial, Helvetica, sans-serif;
-                font-weight: 800;
-                color: $yellow;
+                font-weight: 500;
+                color: ${nyYorkColors.yellow};
                 font-size: 2.1rem;
                 margin-bottom: 10px;
 
             }
             div {
         
-                color: $beige;
+                color: ${nyYorkColors.beige};
                 font-size: 0.9rem;
                 font-weight: bold;
                 width: 90%;
@@ -62,7 +62,7 @@ export const WhoWeAreWrapper = styled.div`
                 -moz-box-shadow: -10px 2px 14px 0px rgba(0,0,0,0.75);
                 box-shadow: -10px 2px 14px 0px rgba(0,0,0,0.75);
             
-                max-width: 280px;
+                max-width: 320px;
             
             }
 

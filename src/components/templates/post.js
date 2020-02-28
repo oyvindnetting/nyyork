@@ -2,8 +2,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import  nyYorkColors from '../constants/colors';
 import Layout from '../layout';
 
 import { PostWrapper } from './styles/PostWrapper';
@@ -18,7 +16,7 @@ const postTemplate = ({ data: { post }}) => {
         <Layout>
             <div className="container">
                 <div className="row" style={{ marginBottom: '40px' }}>
-                    <PostWrapper className="col-lg-12" theme={nyYorkColors}>
+                    <PostWrapper className="col-lg-12">
                     <div class="left">
                             <div class="image">
                                 <img src={post.featured_media.localFile.childImageSharp.fluid.srcWebp} alt={post.featured_media.alt_text} />

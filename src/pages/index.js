@@ -23,28 +23,28 @@ const IndexPage = () => (
     <Layout>
       <SEO title="Home" keywords={['ny york', 'vintage', 'jeans', 'shades']} />
    
-       <ImageCarousel theme={nyYorkColors} /> 
+       <ImageCarousel id="carousel" /> 
    
       <SectionWrapper id="frontpage01">
-        <WhereIs theme={nyYorkColors} />        
+        <WhereIs />        
       </SectionWrapper>
       <SectionWrapper id="frontpage02">
-        <OpeningHours theme={nyYorkColors} />
-        <WhoWeAre />
+        <OpeningHours  color="pink" />
+        <WhoWeAre  />
       </SectionWrapper>
       <SectionWrapper id="frontpage03">
         <Ad type="jeans" />
         <Feature color={nyYorkColors.pink} bgColor={nyYorkColors.yellow} />  
       </SectionWrapper>
       <SectionWrapper id="frontpage04" >
-        <InstagramGrid theme={nyYorkColors}  bgColor={nyYorkColors.pink} />
+        <InstagramGrid bgColor={nyYorkColors.pink} />
       </SectionWrapper>
       <SectionWrapper id="frontpage05">
         <FeatureAlternate bgColor={nyYorkColors.gray} color={nyYorkColors.yellow} />
         <Ad type="wear" />
       </SectionWrapper>
       <SectionWrapper id="frontpage06">
-        <ShopShortcuts  theme={nyYorkColors}  />
+        <ShopShortcuts  />
       </SectionWrapper>
     </Layout>
 );

@@ -1,5 +1,6 @@
 import React from 'react';
 import { AdWrapper } from './styles/AdWrapper';
+import PropTypes from 'prop-types';
 
 import JeansAdImage from '../../images/jeansad.png';
 import WearAdImage from '../../images/wearad.png';
@@ -10,5 +11,10 @@ const Ad = ({type}) => (
     </AdWrapper>
 
 )
+
+
+Ad.propTypes = {
+    type: PropTypes.string
+}
 
 export default Ad;

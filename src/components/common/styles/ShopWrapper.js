@@ -1,5 +1,6 @@
 
 import styled from 'styled-components';
+import nyYorkColors from '../../constants/colors';
 import { dropShadow } from '../mixins';
 
 export const ShopWrapper = styled.div`
@@ -22,12 +23,12 @@ export const ShopWrapper = styled.div`
             font-family: 'Poppins', 'Open Sans', Arial, Helvetica, sans-serif;
             font-weight: 800;
             font-size: 3.5rem;
-            color:  ${props => props.theme.beige};
+            color:  ${nyYorkColors.beige};
 
         }
 
         div.subtitle {
-            color: ${props => props.theme.beige};
+            color: ${nyYorkColors.beige};
             font-size: 1.2rem;
             font-style: italic;
         }
@@ -35,7 +36,7 @@ export const ShopWrapper = styled.div`
             margin-top: -30px;
             margin-right: 10px;
             max-width: 40px;
-            color: ${props => props.theme.beige};
+            color: ${nyYorkColors.beige}
         }
     }
 
@@ -47,7 +48,7 @@ export const ShopWrapper = styled.div`
         div.shoplink {
             margin: 50px;
             width: 50%;
-            border: 15px solid ${props => props.theme.yellow};
+            border: 15px solid ${nyYorkColors.yellow};
             border-radius: 10px;
             ${dropShadow('4px', '4px', '5px')}
 
@@ -72,7 +73,7 @@ export const ShopWrapper = styled.div`
                 font-family: 'Poppins', 'Open Sans', Arial, Helvetica, sans-serif;
                 font-weight: 700;
                 font-size: 3rem;
-                color: ${props => props.theme.yellow};
+                color: ${nyYorkColors.yellow};
                 @media screen and (max-width: 415px) {
                     font-size: 2rem;
                 }

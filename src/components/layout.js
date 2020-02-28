@@ -19,11 +19,9 @@ const Layout = ({children}) => {
     <>
       <LayoutWrapper theme={nyYorkColors}>
         <Header theme={nyYorkColors}  />
-        <Primary id="primary" className="content-area" >
           <main id="main" className="site-main" role="main" >
             {children}
           </main>
-        </Primary>
         <Footer />
       </LayoutWrapper>
     </>

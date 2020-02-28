@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FeatureAlternateWrapper } from './styles/FeatureAlternateWrapper';
 
 import FeatureImage from '../../images/feature_image3.jpg';
@@ -19,5 +20,10 @@ const FeatureAlternate = ({color, bgColor}) => (
     </FeatureAlternateWrapper>
 
 )
+
+FeatureAlternate.propTypes = {
+    color: PropTypes.string,
+    bgColor: PropTypes.string
+}
 
 export default FeatureAlternate;

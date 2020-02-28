@@ -1,9 +1,9 @@
 import React from 'react';
 
 import Logo from '../images/logo.png';
-import ShoppingCart from '../images/shopping_cart.svg';
 import BritishFlag from '../images/british_flag.svg';
 
+import { Link } from 'gatsby';
 
 const Header = ({theme}) => {
 
@@ -16,33 +16,41 @@ const Header = ({theme}) => {
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-    
+      
+
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
-                        <li className="nav-item">
-                            <a className="nav-link" href="/wear">WEAR <span className="sr-only">(current)</span></a>
+                        <li className="nav-item" >
+                            <Link to="/wear"  className="nav-link" activeClassName="nav-active">
+                                WEAR
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/jeans">JEANS</a>
+                            <Link to="/jeans"  className="nav-link" activeClassName="nav-active">
+                                JEANS
+                            </Link>
+                        </li>
+                        <li className="nav-item" >
+                            <Link to="/shop"  className="nav-link" activeClassName="nav-active">
+                                SHOP
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="shop.html">SHOP</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="omoss.html">OM OSS</a>
+                            <Link to="/omoss"  className="nav-link" activeClassName="nav-active">
+                                OM OSS
+                            </Link>
                         </li>
                     </ul>
                 </div>
 
             </nav>
             <div className="shopping_english">
-                <div className="shopping_cart">
-                    <img src={ShoppingCart} alt="shopping cart" />
-                </div>
+    
                 <div className="english">
-                    <a href="english.html">
+         
+                    <Link to="/english" activeClassName="nav-active">
                         <img src={BritishFlag} alt="british flag" />
-                    </a>
+                    </Link>
                 </div>
             </div>
         </header>  

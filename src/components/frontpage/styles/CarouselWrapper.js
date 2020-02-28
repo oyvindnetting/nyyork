@@ -1,26 +1,27 @@
 import styled from 'styled-components';
-
+import nyYorkColors from '../../constants/colors';
 
 export const CarouselWrapper = styled.div`
 
 div.overlay {
     width: 100%;
     position: relative;
-
-    background-color:  ${props => props.theme.pink};
+    text-align: left;
+    background-color: rgba(43,18,16,0.5);
     position: absolute;
     bottom:0;
     padding: 30px 40px;       
     @media screen and (max-width: 415px){
         position: relative;
-        background-color: ${props => props.theme.pink};
+
     }    
 
     h1 {
         font-family: 'Poppins', 'Open Sans', Arial, Helvetica, sans-serif;
-        font-weight: 800;
+        font-weight: 400;
         font-style: italic;
-        color: ${props => props.theme.yellow};;
+
+        color: ${nyYorkColors.yellow};;
         @media screen and (max-width: 415px){
             font-size: 1.3rem;
         }    

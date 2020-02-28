@@ -1,10 +1,10 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-
+import PropTypes from 'prop-types';
 import { WhoWeAreWrapper } from './styles/WhoWeAreWrapper';
 
 // <WhoWeAreWrapper color="pink"> for pink background
-const WhoWeAre = () => {
+const WhoWeAre = ({color}) => {
     const {
         data: { edges: data },
     } = useStaticQuery(graphql`
@@ -19,7 +19,7 @@ const WhoWeAre = () => {
                                 id
                                 localFile {
                                     childImageSharp {
-                                        fluid(quality: 100, maxWidth: 2000) {
+                                        fluid(quality: 100, maxWidth: 1000) {
                                             srcWebp
                                         }
                                     }
@@ -32,7 +32,7 @@ const WhoWeAre = () => {
         }
     `);
     return(
-        <WhoWeAreWrapper>
+        <WhoWeAreWrapper color={color}  className="who_we_are_background">
             <div className="content">
                 <h2>{data[0].node.acf.hvem_er_vi_overskrift}</h2>
                 <div>
@@ -45,6 +45,9 @@ const WhoWeAre = () => {
         </WhoWeAreWrapper>
     );
 
+}
 
+WhoWeAre.propTypes = {
+    color: PropTypes.string,
 }
 export default WhoWeAre;

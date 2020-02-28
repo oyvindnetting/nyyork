@@ -5,8 +5,7 @@ import { Carousel } from 'react-responsive-carousel';
 import { CarouselWrapper } from './styles/CarouselWrapper';
 
 
-
-const ImageCarousel = ({theme}) => {
+const ImageCarousel = () => {
     const {
         slides: { edges: slides },
       } = useStaticQuery(graphql`
@@ -22,7 +21,7 @@ const ImageCarousel = ({theme}) => {
                     id
                     localFile {
                       childImageSharp {
-                        fluid(quality: 100, maxWidth: 2000) {
+                        fluid(quality: 100, maxWidth: 1200) {
                           srcWebp
                         }
                       }
@@ -35,14 +34,14 @@ const ImageCarousel = ({theme}) => {
         } 
       `);
       return (
-        <CarouselWrapper theme={theme}>
-          <Carousel showThumbs={false} showArrows={true} showStatus={true} infiniteLoop={true} autoPlay={true} interval={5000}>
+        <CarouselWrapper>
+          <Carousel showThumbs={false} showArrows={true} infiniteLoop={true} autoPlay={true} interval={6000}>
             {slides.map((slide, i) => (
-              <div>
-                <img src={slide.node.acf.bilde.localFile.childImageSharp.fluid.srcWebp} />
-                <div class="overlay">
+              <div key={slide.node.id}>
+                <img src={slide.node.acf.bilde.localFile.childImageSharp.fluid.srcWebp}  />
+                <div className="overlay">
                     <h1>{slide.node.acf.tittel}</h1>
-                    <div class="content">
+                    <div className="content">
                       {slide.node.acf.undertittel}
                     </div>
                 </div>
@@ -55,6 +54,8 @@ const ImageCarousel = ({theme}) => {
 
       );
 }
+
+
 
 export default ImageCarousel;
 

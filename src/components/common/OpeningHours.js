@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { OpeningHoursWrapper } from './styles/OpeningHoursWrapper';
 
-const OpeningHours = ({theme}) => (
+const OpeningHours = ({color}) => (
     
-    <OpeningHoursWrapper pink theme={theme}>
+    <OpeningHoursWrapper color={color}>
         VINTAGE WEAR<br />
         <span>Mandag - Lørdag</span><br />
         12.00–18.00<br /><br />
@@ -14,5 +15,9 @@ const OpeningHours = ({theme}) => (
 
     </OpeningHoursWrapper>
 )
+
+OpeningHours.propTypes = {
+    color: PropTypes.string,
+}
 
 export default OpeningHours;

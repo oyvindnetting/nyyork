@@ -1,9 +1,10 @@
 
 import styled from 'styled-components';
+import nyYorkColors from '../../constants/colors';
 
 export const PostWrapper = styled.article`
 
-         background-color: ${props => props.theme.pink};
+         background-color: ${nyYorkColors.pink};
          display: flex;
          flex-direction: column;
 
@@ -39,14 +40,14 @@ export const PostWrapper = styled.article`
           div.right {
               width: 100%;
               div.heading {
-                 background-color: ${props => props.theme.yellow};
+                 background-color: ${nyYorkColors.yellow};
                  padding: 40px 60px;
  
                  div.title {
                      font-family: 'Poppins', 'Open Sans', Arial, Helvetica, sans-serif;
                      font-weight:200;
                      font-style: italic;
-                     color: ${props => props.theme.black};
+                     color: ${nyYorkColors.black};
                      font-size: 5rem;
                      @media screen and (max-width: 415px) {
                          font-size: 3rem;
@@ -62,8 +63,8 @@ export const PostWrapper = styled.article`
               div.ingress {
                  margin: 35px;
                  font-size: 1.5rem;
-                 ${props => props.theme.yellow};
-                 background-color: ${props => props.theme.gray};
+                 ${nyYorkColors.yellow};
+                 background-color: ${nyYorkColors.gray};
                  padding: 40px;
            
                  @media screen and (max-width: 415px) {
@@ -75,7 +76,7 @@ export const PostWrapper = styled.article`
                   margin: 35px;
                   margin-top:190px;
                   font-size: 1.2rem;
-                  background-color: ${props => props.theme.gray};
+                  background-color: ${nyYorkColors.gray};
                   padding: 40px;
   
               }

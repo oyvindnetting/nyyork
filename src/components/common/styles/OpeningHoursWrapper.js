@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 //import Img from 'gatsby-image';
 import pinkBackground from '../../../images/opening_hours_pink.png';
-import grayBackground from '../../../images/opening_hours_gray.svg';
-import yellowBackground from '../../../images/opening_hours.svg';
+import grayBackground from '../../../images/opening_hours_gray.png';
 
+import nyYorkColors from '../../constants/colors';
 
 export const OpeningHoursWrapper = styled.div`
     width: 27%;
 
     background-image: ${props => 
-        (props.pink &&  `url(${pinkBackground})` ) || (props.gray && 'url(${grayBackground})') || 'url(${yellowBackground})'
+        ((props.color === 'pink') &&  `url(${pinkBackground})` ) || ((props.color === 'gray')&&  `url(${grayBackground})` )
     };
     background-repeat:no-repeat;
     background-size:100%;      
@@ -17,7 +17,7 @@ export const OpeningHoursWrapper = styled.div`
     padding: 40px 55px;
 
     color: ${props => 
-        (props.pink && props.theme.beige) || (props.gray && props.theme.beige) || props.theme.black
+        ((props.color === 'pink') && nyYorkColors.beige) || ((props.color === 'gray') && nyYorkColors.beige) 
     };
     font-family: 'Poppins', 'Open Sans', Arial, Helvetica, sans-serif;
     font-weight: 600;

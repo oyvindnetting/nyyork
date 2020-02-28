@@ -4,19 +4,18 @@ import bgImage from '../../../images/whereis_background.png';
 import bgImageTablet from '../../../images/mobile_whereis_background.png';
 import bgImageMobile from '../../../images/mobile_whereis_background_415.png';
 
+import nyYorkColors from '../../constants/colors';
 
 export const WhereIsWrapper = styled.div`
     width: 80%;
     margin: 0 auto;
     @media screen and (min-width: 1024px) {
         margin-bottom: 60px;
-        
     }
     div.where_is_background {
         background: url(${bgImage});
         background-size:100%;      
-
-    
+        
         @media screen and (max-width: 1200px){
             background: url(${bgImageTablet});
             background-size:100%;  
@@ -42,7 +41,7 @@ export const WhereIsWrapper = styled.div`
             h2 {
                 font-family: 'Poppins', 'Open Sans', Arial, Helvetica, sans-serif;
                 font-weight: 800;
-                color: ${props => (props.theme.pink)};
+                color: ${nyYorkColors.pink};
                 font-size: 1.7rem;
                 margin-bottom: 20px;
     
@@ -50,7 +49,7 @@ export const WhereIsWrapper = styled.div`
             div {
                 width: 40%;
                 font-size: 0.9rem;
-                color: ${props => (props.theme.black)};;
+                color: ${nyYorkColors.black};
                 font-weight: bold;
                 @media screen and (max-width: 1200px){
                     width:100%;

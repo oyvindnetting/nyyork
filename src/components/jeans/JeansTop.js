@@ -4,7 +4,7 @@ import { JeansTopWrapper } from './styles/JeansTopWrapper';
 
 const JeansTop = () => (
     <JeansTopWrapper>
-        <div class="content">
+        <div className="content">
             <img src={jeansTopImage} alt="WEAR" />
         </div>
     </JeansTopWrapper>

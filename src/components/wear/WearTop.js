@@ -4,7 +4,7 @@ import { WearTopWrapper } from './styles/WearTopWrapper';
 
 const WearTop = () => (
     <WearTopWrapper>
-        <div class="content">
+        <div className="content">
             <img src={wearTopImage} alt="WEAR" />
         </div>
     </WearTopWrapper>

@@ -26,12 +26,12 @@ const WearPage = () => (
         </SectionWrapper>
 
         <SectionWrapper id="wear02">
-            <OpeningHours theme={nyYorkColors} />
+            <OpeningHours color="pink" />
             <WhoWeAre />
         </SectionWrapper>
             
         <SectionWrapper id="wear03">
-            <WhereIs theme={nyYorkColors} />        
+            <WhereIs />        
         </SectionWrapper>
 
         <SectionWrapper id="wear04">
@@ -40,11 +40,11 @@ const WearPage = () => (
         </SectionWrapper>
 
         <SectionWrapper id="wear05" >
-            <InstagramGrid theme={nyYorkColors} bgColor={nyYorkColors.pink}  />
+            <InstagramGrid  bgColor={nyYorkColors.pink}  />
         </SectionWrapper>
 
         <SectionWrapper id="wear06">
-            <ShopShortcuts  theme={nyYorkColors}  />
+            <ShopShortcuts  />
         </SectionWrapper>
    </Layout>
 )

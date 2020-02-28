@@ -42,6 +42,21 @@ module.exports = {
         },
       },
     },
+    {       
+      resolve: "@pasdo501/gatsby-source-woocommerce",
+      options: {
+       // Base URL of Wordpress site
+        api: 'nyyork.test',
+        // true if using https. false if nah.
+        https: false,
+        api_keys: {
+          consumer_key: 'ck_5a66085d1f863e6e1cd5d357779d968da2c3fb98',
+          consumer_secret: 'cs_055a13fad7e5d5be23fb1b21e5acc083c7ce5df1',
+        },
+        // Array of strings with fields you'd like to create nodes for...
+        fields: ['products', 'products/categories', 'products/attributes']
+      }
+    },
     {
       resolve: 'gatsby-source-instagram',
         options: {

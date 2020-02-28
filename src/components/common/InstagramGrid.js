@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { InstagramWrapper } from './styles/InstagramWrapper';
 import { useStaticQuery, graphql } from 'gatsby';
 
 
 
-const InstagramGrid = ({theme, bgColor}) => {
+const InstagramGrid = ({bgColor}) => {
     const {   instaImages: { edges: instaImages },
     } = useStaticQuery(graphql`
     query instagram {
@@ -21,8 +22,8 @@ const InstagramGrid = ({theme, bgColor}) => {
                     caption
                     localFile {
                         childImageSharp {
-                            fluid(quality: 100, maxWidth: 500) {
-                                srcWebp
+                            fixed(width: 400, height: 400) {
+                            ...GatsbyImageSharpFixed
                             }
                         }
                     }
@@ -43,25 +44,30 @@ const InstagramGrid = ({theme, bgColor}) => {
     `);
     var lastFourImages = instaImages.slice(0,4);
 return(
-    <InstagramWrapper theme={theme} bgColor={bgColor}>
-    <div className="heading">
-        <span><a href="#">@vintagewearbyny</a></span>
-    </div>
-    <div className="insta_wrapper">
-
-    {
-        lastFourImages.map((instaImage, i) => (
-        <div className="image">
-            <img src={instaImage.node.localFile.childImageSharp.fluid.srcWebp} alt="Instagram image 1" />
-            <div className="content" dangerouslySetInnerHTML={{ __html: instaImage.node.caption }} >
-            </div>
+    <InstagramWrapper bgColor={bgColor}>
+        <div className="heading">
+            <span><a href="#">@vintagewearbyny</a></span>
         </div>
-            ))}
-  
-    </div>
-</InstagramWrapper>
+        <div className="insta_wrapper">
+
+        {
+            lastFourImages.map((instaImage, i) => (
+            <div className="image" key={instaImage.node.id}>
+                <img src={instaImage.node.localFile.childImageSharp.fixed.src} alt="Instagram image 1" />
+                <div className="content" dangerouslySetInnerHTML={{ __html: instaImage.node.caption }} >
+                </div>
+            </div>
+                ))}
+    
+        </div>
+    </InstagramWrapper>
 
 );
+}
+
+
+InstagramGrid.propTypes = {
+    bgColor: PropTypes.string
 }
 
 

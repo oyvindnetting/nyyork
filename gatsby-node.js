@@ -6,6 +6,7 @@ const slash = require('slash');
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const postTemplate = path.resolve('./src/components/templates/post.js');
+  const productTemplate = path.resolve('./src/components/templates/product.js');
 
   const result = await graphql(`
     {
@@ -30,6 +31,28 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      allWcProducts {
+        edges {
+            node {
+                id
+                slug
+                images {
+                    id
+                    src
+                    localFile {
+                      childImageSharp {
+                        fluid(quality: 100, maxWidth: 1200) {
+                          srcWebp
+                        }
+                      }
+                    }
+                }
+                name
+                price
+                description
+            }
+        }
+      }
     }
   `);
 
@@ -39,9 +62,9 @@ exports.createPages = async ({ graphql, actions }) => {
   }
 
   const {
-    allWordpressPost
+    allWordpressPost,
+    allWcProducts
   } = result.data;
-
 
   allWordpressPost.edges.forEach(edge => {
     if (edge.node.status === 'publish') {
@@ -54,5 +77,16 @@ exports.createPages = async ({ graphql, actions }) => {
       });
     }
   });
+
+  allWcProducts.edges.forEach(edge => {
+
+      createPage({
+        path: `/shop/${edge.node.slug}`,
+        component: slash(productTemplate),
+        context: {
+          id: edge.node.slug,
+        },
+      });
+   });
 
 };

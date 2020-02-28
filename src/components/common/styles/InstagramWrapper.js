@@ -1,5 +1,6 @@
 
 import styled from 'styled-components';
+import nyYorkColors from '../../constants/colors';
 import { dropShadow } from '../mixins';
 
 export const InstagramWrapper = styled.section`
@@ -7,7 +8,7 @@ export const InstagramWrapper = styled.section`
         background-color: ${props => (props.bgColor)};
         padding-bottom: 50px;
         width: 100%;
-        margin: 100px 0;
+        margin:  0;
         padding: 0px 0 0px 0;
 
         div.heading {
@@ -22,7 +23,7 @@ export const InstagramWrapper = styled.section`
                 font-size: 2rem;
         
                 a {
-                    color: ${props => (props.theme.beige)};
+                    color: ${nyYorkColors.beige};
                 }
             }
         }
@@ -41,7 +42,7 @@ export const InstagramWrapper = styled.section`
                 cursor: pointer;
                 width: 48%;
                 margin: 10px;
-                border: 5px solid ${props => (props.theme.beige)};
+                border: 5px solid ${nyYorkColors.beige};
                 border-radius: 5px;
                 ${dropShadow('-5px', '5px', '5px')};
                 transition: transform .5s;
@@ -51,16 +52,13 @@ export const InstagramWrapper = styled.section`
                     width: 95%;                
                 }
 
-
-
-
                 img {
                     width: 100%;
                     
                 }
                 div.content {
                     opacity: 0;
-                    background-color: $black;
+                    background-color: ${nyYorkColors.black};
                     background-color: rgba(43,18,16,0.5);
                     position: absolute;
                     bottom:0px;

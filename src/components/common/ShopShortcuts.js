@@ -5,23 +5,23 @@ import jeansImage from '../../images/jeansshop.jpg';
 import wearImage from '../../images/shadesshop.jpg';
 import emptyShoppingBag from '../../images/empty_bag.svg';
 
-const ShopShortcuts = ({theme}) => (
-    <ShopWrapper theme={theme}>
-        <div class="heading">
+const ShopShortcuts = () => (
+    <ShopWrapper>
+        <div className="heading">
             <img src={emptyShoppingBag} alt="empty shopping bag" />
             <span>SHOP</span>
-            <div class="subtitle">Sjekk ut hva vi har til salgs i nettbutikken</div>
+            <div className="subtitle">Sjekk ut hva vi har til salgs i nettbutikken</div>
         </div>
-        <div class="shopping_wrapper">
-            <div class="shoplink jeans_shop">
+        <div className="shopping_wrapper">
+            <div className="shoplink jeans_shop">
                 <img src={jeansImage} alt="Jeans" />
-                <div class="title">
+                <div className="title">
                     JEANS
                 </div>
             </div>
-            <div class="shoplink shades_shop">
+            <div className="shoplink shades_shop">
                 <img src={wearImage} alt="Shades" />
-                <div class="title">
+                <div className="title">
                     SHADES
                 </div>
             </div>
