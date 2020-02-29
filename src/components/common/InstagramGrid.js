@@ -22,7 +22,7 @@ const InstagramGrid = ({bgColor}) => {
                     caption
                     localFile {
                         childImageSharp {
-                            fixed(width: 400, height: 400) {
+                            fixed(width: 500, height: 500, quality: 100) {
                             ...GatsbyImageSharpFixed
                             }
                         }
