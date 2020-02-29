@@ -32,12 +32,12 @@ module.exports = {
       resolve: 'gatsby-source-wordpress',
       options: {
         includedRoutes: ["/*/*/posts", "/*/*/media", '/*/*/acf'],
-        baseUrl: 'nyyork.test',
-        protocol: 'http',
+        baseUrl: 'nyyork.no',
+        protocol: 'https',
         hostingWPCOM: false,
         useACF: true,
         searchAndReplaceContentUrls: {
-          sourceUrl: 'https://nyyork.test',
+          sourceUrl: 'https://nyyork.no',
           replacementUrl: '',
         },
       },
@@ -46,7 +46,7 @@ module.exports = {
       resolve: "@pasdo501/gatsby-source-woocommerce",
       options: {
        // Base URL of Wordpress site
-        api: 'nyyork.test',
+        api: 'nyyork.no',
         // true if using https. false if nah.
         https: false,
         api_keys: {
