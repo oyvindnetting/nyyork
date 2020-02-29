@@ -37,7 +37,7 @@ module.exports = {
         hostingWPCOM: false,
         useACF: true,
         searchAndReplaceContentUrls: {
-          sourceUrl: 'http://nyyork.no',
+          sourceUrl: 'https://nyyork.no',
           replacementUrl: '',
         },
       },
