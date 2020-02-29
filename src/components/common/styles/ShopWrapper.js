@@ -11,6 +11,14 @@ export const ShopWrapper = styled.div`
     div.shopping_wrapper {
         display: flex;
         flex-direction: row;
+        @media screen and (max-width: 1200px){
+        flex-direction: column;
+        align-items: center;
+        width: 100%;  
+        height: 100%;
+        margin-bottom: 100px;
+    }
+}
     }
 
     div.heading {

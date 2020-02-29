@@ -8,6 +8,9 @@ export const ShopProductWrapper = styled.div`
     flex-direction: column;
     padding: 20px;
 
+    @media screen and (max-width: 415px) {
+        max-width: 100%;
+    }
     div.image {
         position: relative;
         cursor: pointer;

@@ -24,10 +24,15 @@ export const WhereIsWrapper = styled.div`
             width: 100%;
         }
 
+        @media screen and (max-width: 768px){
+            background-size: 130%  130%;
 
+        }
         @media screen and (max-width: 415px){
             background: url(${bgImageMobile});
-            padding-bottom: 230px;
+            padding-bottom: 400px;
+            background-size: cover;
+            background-repeat: no-repeat;
         }  
         
         background-repeat:no-repeat;
@@ -40,7 +45,10 @@ export const WhereIsWrapper = styled.div`
                 
                 padding: 40px 25px;
             }
-    
+             
+            a {
+                color: {nyYorkColors.pink} !important;
+            }
 
           
             h2 {
@@ -53,6 +61,11 @@ export const WhereIsWrapper = styled.div`
                     font-size: 2rem;
                     padding: 10px;
                 }
+                @media screen and (max-width: 415px){
+                    font-size: 1.5rem;
+                    padding: 10px;
+                }
+    
     
             }
             div {
@@ -60,6 +73,11 @@ export const WhereIsWrapper = styled.div`
                 font-size: 0.9rem;
                 color: ${nyYorkColors.black};
                 font-weight: bold;
+
+                a {
+                    color: ${nyYorkColors.pink};
+                }
+
                 @media screen and (max-width: 1200px){
                     width:100%;
                
@@ -76,6 +94,9 @@ export const WhereIsWrapper = styled.div`
 
             @media screen and (max-width: 1200px){
                 padding: 80px 150px;
+            }
+            @media screen and (max-width: 768px){
+                padding: 50px 120px;
             }
 
             @media screen and (max-width: 415px){

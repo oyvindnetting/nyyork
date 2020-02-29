@@ -23,7 +23,7 @@ export const FeatureAlternateWrapper = styled.div`
 
 
     @media screen and (max-width: 415px){
-        width: 100%;
+        width: 90%;
         padding-bottom: 100px;
         margin:0;
         display: flex;
@@ -64,7 +64,7 @@ export const FeatureAlternateWrapper = styled.div`
         }
         div {
             color: ${nyYorkColors.beige};
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: bold;
   
           
@@ -107,6 +107,7 @@ export const FeatureAlternateWrapper = styled.div`
 
         @media screen and (max-width: 768px) {
             margin-left: -250px;
+            width: 50%;
         }
 
         @media screen and (max-width: 415px){
@@ -119,6 +120,7 @@ export const FeatureAlternateWrapper = styled.div`
             box-shadow: 10px 2px 14px 0px rgba(0,0,0,0.75);
         
             max-height: 310px;
+            
             @media screen and (max-width: 415px){
                 max-width: 100%;
             }

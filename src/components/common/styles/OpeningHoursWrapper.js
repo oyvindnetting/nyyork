@@ -40,7 +40,7 @@ export const OpeningHoursWrapper = styled.div`
     @media screen and (max-width: 415px){
         width: 90%;
         font-size: 0.9rem;
-        padding: 50px 70px;
+        padding: 70px;
         margin: 100px 0;
     }
 
@@ -58,7 +58,7 @@ export const OpeningHoursWrapper = styled.div`
         display: block;
         content: '';
         @media screen and (max-width: 1200px){
-            padding-top: 50%;
+            padding-top: 60%;
         }
         
     }

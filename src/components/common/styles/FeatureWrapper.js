@@ -19,9 +19,11 @@ export const FeatureWrapper = styled.div`
     }
 
     @media screen and (max-width: 415px) {
-        width: 100%;
+        width: 90%;
         padding-bottom: 100px;
         flex-direction: column-reverse;
+        margin-right: auto;
+        margin-left: auto;
 
     }
     div.content {
@@ -29,7 +31,9 @@ export const FeatureWrapper = styled.div`
         width: 55%;
         @media screen and (max-width: 415px){
             width: 100%;
-            text-align: left;
+            text-align: center;
+            padding: 25px;
+
 
         }
         h2 {
@@ -50,7 +54,7 @@ export const FeatureWrapper = styled.div`
         }
         div {
             color: ${props => props.color};
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: bold;
             width: 90%;
         }
@@ -99,7 +103,7 @@ export const FeatureWrapper = styled.div`
         
             max-height: 310px;
             @media screen and (max-width: 415px){
-                max-width: 100%;
+                width: 100%;
             }
 
         }

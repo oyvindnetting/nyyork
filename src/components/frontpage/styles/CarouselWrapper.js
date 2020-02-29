@@ -31,6 +31,7 @@ div.overlay {
         font-family: 'Poppins', 'Open Sans', Arial, Helvetica, sans-serif;
         font-size: 1.2rem;
         font-weight: 200;
+        padding-left: 8px;
         @media screen and (max-width: 415px){
             font-size: 0.9rem;
         }    

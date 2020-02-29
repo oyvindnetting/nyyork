@@ -8,8 +8,6 @@ import nyYorkColors from '../../constants/colors';
 export const WhoWeAreWrapper = styled.div`
 
 
-@media screen and (min-width: 416px){
-
         background-image: url(${props => ((props.color === 'pink') ? bgImagePink: bgImage)});
         background-repeat:no-repeat;
         background-size:100%;      
@@ -20,7 +18,11 @@ export const WhoWeAreWrapper = styled.div`
 
         @media screen and (max-width: 1024px){
             width: 98%;
-            
+        }
+
+        @media screen and (max-width: 768px){
+            background-size: 200%  130%;
+
         }
 
 
@@ -76,6 +78,7 @@ export const WhoWeAreWrapper = styled.div`
                 display: block;
                 content: '';
 
+          
                 @media screen and (max-width: 415px){
                     padding-top: 3%;
                 }
