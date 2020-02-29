@@ -10,16 +10,16 @@ const ContactForm = () => (
             <input type="hidden" name="form-name" value="contact" />
 
             <div className="field half first">
-                <label for="name">Navn</label>
+                <label htmlFor="name">Navn</label>
                 <input type="text" id="name" name="name" placeholder="Fornavn, Etternavn" />
             </div>
             <div className="field half">
-                <label for="email">E-post</label>
+                <label htmlFor="email">E-post</label>
                 <input type="email" id="email" name="email" placeholder="Din e-post" />
             </div>
 
             <div className="field">
-                <label for="topic">Hva gjelder det?</label>
+                <label htmlFor="topic">Hva gjelder det?</label>
                 <select id="topic" name="topic">
                     <option value="other">Andre ting</option>
                     <option value="where">Hvor kjøper dere klær?</option>
@@ -28,7 +28,7 @@ const ContactForm = () => (
             </div>
 
             <div className="field">
-                <label for="question">Ditt spørsmål</label>
+                <label htmlFor="question">Ditt spørsmål</label>
                 <textarea id="question" name="question" placeholder="Her kan du skrive ditt spørsmål til oss"></textarea>
 
             </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import SEO from '../components/seo';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 import { SectionWrapper } from '../components/common/SectionWrapper';
@@ -17,36 +18,83 @@ import  nyYorkColors from '../components/constants/colors';
 
 
 
-const JeansPage = () => (
-    <Layout>
-        <SEO title="Home" keywords={['ny york', 'vintage', 'wear']} />
-
-        <SectionWrapper id="jeans01">
-            <JeansTop />
-        </SectionWrapper>
-
-        <SectionWrapper id="jeans02">
-            <OpeningHours color="gray" />
-            <WhoWeAre />
-        </SectionWrapper>
-            
-        <SectionWrapper id="jeans03">
-            <WhereIs />        
-        </SectionWrapper>
-
-        <SectionWrapper id="jeans04">
-            <Ad type="wear" />
-            <Feature color={nyYorkColors.yellow} bgColor={nyYorkColors.gray} />  
-        </SectionWrapper>
-
-        <SectionWrapper id="jeans05" >
-            <InstagramGrid bgColor={nyYorkColors.gray} />
-        </SectionWrapper>
-
-        <SectionWrapper id="jeans06">
-            <ShopShortcuts  />
-        </SectionWrapper>
-   </Layout>
-)
+const JeansPage = () => {
+    const {
+        data: { edges: data },
+      } = useStaticQuery(graphql`
+          query jeans {
+              data:  allWordpressAcfJeans {
+                  edges {
+                      node {
+                          acf {
+                            apningstider
+                            hvor_ligger_nyyork_overskrift
+                            hvor_ligger_nyyork_tekst
+                            featureartikkel_1 {
+                                post_title
+                                post_excerpt
+                                post_name
+                        
+                            }
+                            featurebilde1_liten {
+                                id
+                                localFile {
+                                    childImageSharp {
+                                        fluid(quality: 100, maxWidth:415) {
+                                            srcWebp
+                                        }
+                                    }
+                                }
+                            }
+                            hvem_er_vi_overskrift
+                            hvem_er_vi_tekst
+                            hvem_er_vi_bilde {
+                                id
+                                localFile {
+                                    childImageSharp {
+                                        fluid(quality: 100, maxWidth:415) {
+                                            srcWebp
+                                        }
+                                    }
+                                }
+                            }
+                          }
+                      }
+                  }
+              }
+          }
+      `);
+    return (
+        <Layout>
+            <SEO title="Jeans" keywords={['ny york', 'vintage', 'wear']} />
+    
+            <SectionWrapper id="jeans01">
+                <JeansTop />
+            </SectionWrapper>
+    
+            <SectionWrapper id="jeans02">
+                <OpeningHours color="gray" data={data} />
+                <WhoWeAre data={data} />
+            </SectionWrapper>
+                
+            <SectionWrapper id="jeans03">
+                <WhereIs data={data} />        
+            </SectionWrapper>
+    
+            <SectionWrapper id="jeans04">
+                <Ad type="wear" />
+                <Feature color={nyYorkColors.yellow} bgColor={nyYorkColors.gray} data={data} />  
+            </SectionWrapper>
+    
+            <SectionWrapper id="jeans05" >
+                <InstagramGrid bgColor={nyYorkColors.gray} />
+            </SectionWrapper>
+    
+            <SectionWrapper id="jeans06">
+                <ShopShortcuts  />
+            </SectionWrapper>
+       </Layout>
+    )
+}
 
 export default JeansPage;

@@ -34,6 +34,7 @@ export const OpeningHoursWrapper = styled.div`
         width: 60%;
         font-size: 1.1rem;
         padding: 90px;
+        margin: 100px 0;
     }
 
     @media screen and (max-width: 415px){

@@ -38,7 +38,7 @@ const ImageCarousel = () => {
           <Carousel showThumbs={false} showArrows={true} infiniteLoop={true} autoPlay={true} interval={6000}>
             {slides.map((slide, i) => (
               <div key={slide.node.id}>
-                <img src={slide.node.acf.bilde.localFile.childImageSharp.fluid.srcWebp}  />
+                <img src={slide.node.acf.bilde.localFile.childImageSharp.fluid.srcWebp} alt={slide.node.acf.tittel} />
                 <div className="overlay">
                     <h1>{slide.node.acf.tittel}</h1>
                     <div className="content">

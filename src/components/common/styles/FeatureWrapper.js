@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const FeatureWrapper = styled.div`
 
-
     position: relative;
     width: 60%;
     display: flex;
@@ -10,8 +9,6 @@ export const FeatureWrapper = styled.div`
     background-color: ${props => props.bgColor};
     border: 3px solid ${props => props.color};
     margin-right: 140px;
-
-
 
     @media screen and (max-width: 1200px){
         margin: 50px auto;
@@ -28,11 +25,11 @@ export const FeatureWrapper = styled.div`
 
     }
     div.content {
-        padding: 25px 30px;
-        width: 65%;
+        padding: 25px 0 25px 30px;
+        width: 55%;
         @media screen and (max-width: 415px){
             width: 100%;
-            text-align: center;
+            text-align: left;
 
         }
         h2 {
@@ -41,6 +38,7 @@ export const FeatureWrapper = styled.div`
             color: ${props => props.color};
             font-size: 2.2rem;
             margin-bottom: 10px;
+            text-transform: uppercase;
             span {
                 color: ${props => props.bgColor};
                 -webkit-text-stroke-width: 1px;
@@ -49,18 +47,17 @@ export const FeatureWrapper = styled.div`
                 margin-right: 5px;
                 letter-spacing: 1.1px;
             }
-
         }
         div {
             color: ${props => props.color};
-            font-size: 0.9rem;
+            font-size: 1rem;
             font-weight: bold;
             width: 90%;
-        
         }
 
-        button {
+        a {
             position: absolute;
+            display: block;
             left: 20px;
             bottom: 20px;
             @media screen and (max-width: 415px){
@@ -104,8 +101,8 @@ export const FeatureWrapper = styled.div`
             @media screen and (max-width: 415px){
                 max-width: 100%;
             }
+
         }
     }
-  
 
 `;

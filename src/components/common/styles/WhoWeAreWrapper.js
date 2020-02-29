@@ -36,7 +36,7 @@ export const WhoWeAreWrapper = styled.div`
             padding: 25px 30px;
             h2 {
                 font-family: 'Poppins', 'Open Sans', Arial, Helvetica, sans-serif;
-                font-weight: 500;
+                font-weight: 600;
                 color: ${nyYorkColors.yellow};
                 font-size: 2.1rem;
                 margin-bottom: 10px;

@@ -8,14 +8,13 @@ import ShopCategory from '../components/shop/ShopCategory';
 import ShopProducts from '../components/shop/ShopProducts';
 
 import '../components/styles/styles.scss';
-import  nyYorkColors from '../components/constants/colors';
 
 
 
 
 const ShopPage = () => (
     <Layout>
-        <SEO title="Home" keywords={['ny york', 'vintage', 'wear']} />
+        <SEO title="Shop" keywords={['ny york', 'vintage', 'wear']} />
         <SectionWrapper id="shop01">
             <ShopTop />
         </SectionWrapper>

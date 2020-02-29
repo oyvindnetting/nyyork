@@ -7,7 +7,7 @@ import bgImageMobile from '../../../images/mobile_whereis_background_415.png';
 import nyYorkColors from '../../constants/colors';
 
 export const WhereIsWrapper = styled.div`
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     @media screen and (min-width: 1024px) {
         margin-bottom: 60px;
@@ -36,14 +36,23 @@ export const WhereIsWrapper = styled.div`
         
         div.content {
             padding: 80px 25px;
+            @media screen and (max-width: 768px){
+                
+                padding: 40px 25px;
+            }
+    
 
           
             h2 {
                 font-family: 'Poppins', 'Open Sans', Arial, Helvetica, sans-serif;
                 font-weight: 800;
                 color: ${nyYorkColors.pink};
-                font-size: 1.7rem;
-                margin-bottom: 20px;
+                font-size: 1.4rem;
+                margin-bottom: 10px;
+                @media screen and (max-width: 768px){
+                    font-size: 2rem;
+                    padding: 10px;
+                }
     
             }
             div {
@@ -53,10 +62,11 @@ export const WhereIsWrapper = styled.div`
                 font-weight: bold;
                 @media screen and (max-width: 1200px){
                     width:100%;
+               
                     font-size: 1.5rem;
                 }
                 @media screen and (max-width: 415px){
-                    font-size: 1.1rem;
+                    font-size: 0.9rem;
                     padding: 10px;
                 }
                 @media screen and (max-width: 320px){
@@ -76,7 +86,7 @@ export const WhereIsWrapper = styled.div`
         &:after {
                 padding-top: 5%;
                 @media screen and (max-width: 1200px){ 
-                    padding-top: 60%;
+                    padding-top: 20%;
                 }
                 display: block;
                 content: '';

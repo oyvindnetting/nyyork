@@ -1,30 +1,12 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { FeatureWrapper } from './styles/FeatureWrapper';
 
-import FeatureImage from '../../images/feature_image2.jpg';
+const Feature = ({color, bgColor, data}) => {
 
-const Feature = ({color, bgColor}) => {
-    const {
-        data: { edges: data },
-    } = useStaticQuery(graphql`
-        query feature1 {
-            data:  allWordpressAcfForside {
-                edges {
-                    node {
-                        acf {
-                            featureartikkel_1 {
-                                post_title
-                                post_excerpt
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    `);
-
+    
+    const featureLink = "/articles/"+data[0].node.acf.featureartikkel_1.post_name;
     return(
         <FeatureWrapper color={color} bgColor={bgColor}>
         <div className="content">
@@ -32,10 +14,10 @@ const Feature = ({color, bgColor}) => {
             <div>
                 {data[0].node.acf.featureartikkel_1.post_excerpt}
             </div>
-            <button>LES MER</button>
+            <Link to={featureLink}>LES MER</Link>
         </div>
         <div className="image">
-            <img src={FeatureImage} alt="Feature image 2" />
+            <img src={data[0].node.acf.featurebilde1_liten.localFile.childImageSharp.fluid.srcWebp} alt={data[0].node.acf.featureartikkel_1.post_title} />
         </div>
     </FeatureWrapper>
     );
@@ -44,7 +26,8 @@ const Feature = ({color, bgColor}) => {
 
 Feature.propTypes = {
     color: PropTypes.string,
-    bgColor: PropTypes.string
+    bgColor: PropTypes.string,
+    data: PropTypes.array.isRequired
 }
 
 

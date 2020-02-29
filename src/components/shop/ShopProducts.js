@@ -23,6 +23,7 @@ const ShopProducts = () => {
                         name
                         price
                         description
+                        short_description
                     }
                 }
             }

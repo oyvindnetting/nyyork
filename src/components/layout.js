@@ -4,15 +4,9 @@ import 'bootstrap/dist/css/bootstrap-grid.css';
 import { LayoutWrapper } from './styles/LayoutWrapper';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import styled from 'styled-components';
 
 import nyYorkColors from './constants/colors';
 
-
-
-const Primary = styled.main`
-  padding: 0;
-`;
 
 const Layout = ({children}) => {
   return (
@@ -27,6 +21,7 @@ const Layout = ({children}) => {
     </>
   );
 };
+
 
 
 

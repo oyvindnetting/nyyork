@@ -1,5 +1,6 @@
 import React from 'react';
 import SEO from '../components/seo';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 import { SectionWrapper } from '../components/common/SectionWrapper';
@@ -7,7 +8,7 @@ import OpeningHours from '../components/common/OpeningHours';
 import WhoWeAre from '../components/common/WhoWeAre';
 import WhereIs from '../components/common/WhereIs';
 import Ad from '../components/common/Ad';
-import Feature from '../components/common/Feature';
+import FeatureAlternate from '../components/common/FeatureAlternate';
 import InstagramGrid from '../components/common/InstagramGrid';
 import ShopShortcuts from '../components/common/ShopShortcuts';
 import WearTop from '../components/wear/WearTop';
@@ -17,36 +18,85 @@ import  nyYorkColors from '../components/constants/colors';
 
 
 
-const WearPage = () => (
-    <Layout>
-        <SEO title="Home" keywords={['ny york', 'vintage', 'wear']} />
+const WearPage = () => {
+    const {
+        data: { edges: data },
+      } = useStaticQuery(graphql`
+          query wear {
+              data:  allWordpressAcfWear {
+                  edges {
+                      node {
+                          acf {
+                            apningstider
+                            hvor_ligger_nyyork_overskrift
+                            hvor_ligger_nyyork_tekst
+                            featureartikkel_1 {
+                                post_title
+                                post_excerpt
+                                post_name
+                        
+                            }
+                            featurebilde1_liten {
+                                id
+                                localFile {
+                                    childImageSharp {
+                                        fluid(quality: 100, maxWidth:415) {
+                                            srcWebp
+                                        }
+                                    }
+                                }
+                            }
+                            hvem_er_vi_overskrift
+                            hvem_er_vi_tekst
+                            hvem_er_vi_bilde {
+                                id
+                                localFile {
+                                    childImageSharp {
+                                        fluid(quality: 100, maxWidth:415) {
+                                            srcWebp
+                                        }
+                                    }
+                                }
+                            }
+                          }
+                      }
+                  }
+              }
+          }
+      `);
 
-        <SectionWrapper id="wear01">
-            <WearTop />
-        </SectionWrapper>
+    return (
+        <Layout>
+            <SEO title="Wear" keywords={['ny york', 'vintage', 'wear']} />
 
-        <SectionWrapper id="wear02">
-            <OpeningHours color="pink" />
-            <WhoWeAre />
-        </SectionWrapper>
-            
-        <SectionWrapper id="wear03">
-            <WhereIs />        
-        </SectionWrapper>
+            <SectionWrapper id="wear01">
+                <WearTop />
+            </SectionWrapper>
 
-        <SectionWrapper id="wear04">
-            <Ad type="jeans" />
-            <Feature color={nyYorkColors.yellow} bgColor={nyYorkColors.gray} />  
-        </SectionWrapper>
+            <SectionWrapper id="wear02">
+                <OpeningHours color="pink" store="wear" data={data} />
+                <WhoWeAre data={data} />
+            </SectionWrapper>
+                
+            <SectionWrapper id="wear03">
+                <WhereIs data={data} />        
+            </SectionWrapper>
 
-        <SectionWrapper id="wear05" >
-            <InstagramGrid  bgColor={nyYorkColors.pink}  />
-        </SectionWrapper>
+            <SectionWrapper id="wear04">
+                <Ad type="jeans" />
+                <FeatureAlternate color={nyYorkColors.yellow} bgColor={nyYorkColors.pink} data={data} />  
+            </SectionWrapper>
 
-        <SectionWrapper id="wear06">
-            <ShopShortcuts  />
-        </SectionWrapper>
-   </Layout>
-)
+            <SectionWrapper id="wear05" >
+                <InstagramGrid  bgColor={nyYorkColors.pink}  />
+            </SectionWrapper>
+
+            <SectionWrapper id="wear06">
+                <ShopShortcuts  />
+            </SectionWrapper>
+    </Layout>   
+    );
+}
+
 
 export default WearPage;

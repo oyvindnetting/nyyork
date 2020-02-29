@@ -1,29 +1,61 @@
 import React from 'react';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { FeatureAlternateWrapper } from './styles/FeatureAlternateWrapper';
 
-import FeatureImage from '../../images/feature_image3.jpg';
 
-const FeatureAlternate = ({color, bgColor}) => (
-    <FeatureAlternateWrapper color={color} bgColor={bgColor}>
-        <div className="image">
-            <img src={FeatureImage} alt="Feature image 2" />
-        </div>
-        <div className="content">
-            <h2><span>FEATURE:</span>VINTAGE</h2>
-            <div>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, expedita consectetur! Id totam nihil maiores temporibus autem unde, magni quibusdam quo architecto eligendi quisquam voluptatem dolore aut harum assumenda commodi.
+const FeatureAlternate = ({color, bgColor}) => {
+    const {
+        data: { edges: data },
+    } = useStaticQuery(graphql`
+        query feature2 {
+            data:  allWordpressAcfForside {
+                edges {
+                    node {
+                        acf {
+                            featureartikkel_2 {
+                                post_title
+                                post_excerpt
+                                post_name
+                       
+                            }
+                            featurebilde2_liten {
+                                id
+                                localFile {
+                                    childImageSharp {
+                                        fluid(quality: 100, maxWidth:500) {
+                                            srcWebp
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    `);
 
+    const featureLink = "/articles/"+data[0].node.acf.featureartikkel_2.post_name;
+
+    return (
+        <FeatureAlternateWrapper color={color} bgColor={bgColor}>
+            <div className="image">
+                <img src={data[0].node.acf.featurebilde2_liten.localFile.childImageSharp.fluid.srcWebp} alt={data[0].node.acf.featureartikkel_2.post_title} />
             </div>
-            <button>LES MER</button>
-        </div>
-    </FeatureAlternateWrapper>
-
-)
+            <div className="content">
+                <h2><span>FEATURE:</span>{data[0].node.acf.featureartikkel_2.post_title}</h2>
+                <div dangerouslySetInnerHTML={{ __html: data[0].node.acf.featureartikkel_2.post_excerpt}}>
+                </div>
+                <Link to={featureLink}>LES MER</Link>
+            </div>
+        </FeatureAlternateWrapper>
+)};
 
 FeatureAlternate.propTypes = {
     color: PropTypes.string,
-    bgColor: PropTypes.string
+    bgColor: PropTypes.string,
+    data: PropTypes.array.isRequired
 }
 
 export default FeatureAlternate;

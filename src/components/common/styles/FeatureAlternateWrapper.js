@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import nyYorkColors from '../../constants/colors'; 
 
 export const FeatureAlternateWrapper = styled.div`
 
@@ -41,7 +42,6 @@ export const FeatureAlternateWrapper = styled.div`
             width: 100%;
             text-align: center;
             margin-left: 0;
-
         }
     
         h2 {
@@ -50,6 +50,7 @@ export const FeatureAlternateWrapper = styled.div`
             color: ${props => props.color};
             font-size: 2.2rem;
             margin-bottom: 10px;
+            text-transform: uppercase;
             span {
                 color: ${props => props.bgColor};
                 -webkit-text-stroke-width: 1px;
@@ -62,14 +63,14 @@ export const FeatureAlternateWrapper = styled.div`
 
         }
         div {
-            color: $beige;
-            font-size: 0.9rem;
+            color: ${nyYorkColors.beige};
+            font-size: 1rem;
             font-weight: bold;
   
           
         }
 
-        button {
+        a {
             
             position: absolute;
             right: 20px;
@@ -77,7 +78,7 @@ export const FeatureAlternateWrapper = styled.div`
             left: auto;
             background-color: ${props => props.color};
             border: 0;
-            color: $black;
+            color: ${nyYorkColors.black};
             padding: 8px 70px;
             font-family: 'Poppins', 'Open Sans', Arial, Helvetica, sans-serif;
             font-weight: 700;

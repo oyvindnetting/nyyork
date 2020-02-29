@@ -50,8 +50,8 @@ module.exports = {
         // true if using https. false if nah.
         https: false,
         api_keys: {
-          consumer_key: 'ck_5a66085d1f863e6e1cd5d357779d968da2c3fb98',
-          consumer_secret: 'cs_055a13fad7e5d5be23fb1b21e5acc083c7ce5df1',
+          consumer_key: 'ck_4fa18fc13f5f95d13a29e3d5c59e93fe1b2143f8',
+          consumer_secret: 'cs_07e402f1c530c52b2a9b1275a59bf9fb9f29bcb8',
         },
         // Array of strings with fields you'd like to create nodes for...
         fields: ['products', 'products/categories', 'products/attributes']

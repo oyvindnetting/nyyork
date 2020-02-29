@@ -1,36 +1,9 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import { WhoWeAreWrapper } from './styles/WhoWeAreWrapper';
 
-// <WhoWeAreWrapper color="pink"> for pink background
-const WhoWeAre = ({color}) => {
-    const {
-        data: { edges: data },
-    } = useStaticQuery(graphql`
-        query whoweare {
-            data:  allWordpressAcfForside {
-                edges {
-                    node {
-                        acf {
-                            hvem_er_vi_overskrift
-                            hvem_er_vi_tekst
-                            hvem_er_vi_bilde {
-                                id
-                                localFile {
-                                    childImageSharp {
-                                        fluid(quality: 100, maxWidth: 1000) {
-                                            srcWebp
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    `);
+const WhoWeAre = ({color, data}) => {
+
     return(
         <WhoWeAreWrapper color={color}  className="who_we_are_background">
             <div className="content">
@@ -49,5 +22,6 @@ const WhoWeAre = ({color}) => {
 
 WhoWeAre.propTypes = {
     color: PropTypes.string,
+    data: PropTypes.array.isRequired
 }
 export default WhoWeAre;

@@ -16,12 +16,10 @@ export const ShopProductWrapper = styled.div`
             width: 100%;
         }
         div.product_title {
-            position: absolute;
-            bottom:0;
-            left:0;
+    
             width: 100%;
             padding: 20px;
-            background-color: rgba(43,18,16,0.5);
+            background-color: ${nyYorkColors.pink};
             text-align: center;
 
             font-family: 'Poppins', 'Open Sans', Arial, Helvetica, sans-serif;
@@ -52,13 +50,15 @@ export const ShopProductWrapper = styled.div`
         padding: 20px;
         font-size: 1.1rem;
         text-align: center;
-        
-        button {
+
+ 
+        a {
+            display: block;
             font-family: 'Poppins', 'Open Sans', Arial, Helvetica, sans-serif;
             font-weight: 400;
             outline: none;
-            background-color: ${nyYorkColors.pink};
-            color: ${nyYorkColors.beige};
+            background-color: ${nyYorkColors.yellow};
+            color: ${nyYorkColors.black};
             border: 0;
             margin-top: 50px;
             padding: 10px 30px;

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 
 import { ShopProductWrapper } from './styles/ShopProductWrapper';
 
@@ -16,7 +17,8 @@ const ShopProduct = ({product}) => {
                     </div>
                 </div>
                 <div className="content">
-                    <button><a href={productLink}>LES MER OM PRODUKTET</a></button>
+                    <div class="short_desc" dangerouslySetInnerHTML={{ __html: product.node.short_description }}></div>
+                    <Link to={productLink}>LES MER OM PRODUKTET</Link>
                 </div>
             </div>
         </ShopProductWrapper>

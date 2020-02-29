@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-
+import SEO from '../seo';
 import Layout from '../layout';
 import { SectionWrapper } from '../common/SectionWrapper';
 import { ProductWrapper } from './styles/ProductWrapper';
@@ -12,6 +12,8 @@ const productTemplate = ({ data: { product } }) => {
 
     return (
         <Layout>
+            <SEO title="Produkt" keywords={['ny york', 'shop', 'product']} />
+
             <SectionWrapper>
                 <ProductWrapper>
                     <div className="left">

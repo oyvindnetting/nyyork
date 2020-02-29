@@ -1,17 +1,25 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import { WhereIsWrapper } from './styles/WhereIsWrapper'
 
-const WhereIs = () => (
-    <WhereIsWrapper >
+const WhereIs = ({data}) => {
+    return (
+        <WhereIsWrapper >
         <div className="where_is_background">
             <div className="content">
-                <h2>HVOR LIGGER NY YORK?</h2>
-                <div>
-                    NY YORK ligger på Olaf Ryes plass på Grünerløkka i Oslo. Vi har også en filial med jeans og denim i Rathkes gate litt lenger ned på løkka. Du finner oss ved å ta trikk nummer 11, 12 og 13 til Olaf Ryes plass eller buss 30 til Sofienbergparken. 
+                <h2>{data[0].node.acf.hvor_ligger_nyyork_overskrift}</h2>
+                <div dangerouslySetInnerHTML={{ __html: data[0].node.acf.hvor_ligger_nyyork_tekst }}>
+                    
                 </div>
             </div>
         </div>
     </WhereIsWrapper>
-)
-
+    )
+}
+WhereIs.propTypes = {
+    color: PropTypes.string,
+    data: PropTypes.array.isRequired
+}
+   
 export default WhereIs;

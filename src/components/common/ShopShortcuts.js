@@ -1,5 +1,6 @@
 import React from 'react';
 import { ShopWrapper } from './styles/ShopWrapper';
+import { Link } from 'gatsby';
 
 import jeansImage from '../../images/jeansshop.jpg';
 import wearImage from '../../images/shadesshop.jpg';
@@ -14,13 +15,17 @@ const ShopShortcuts = () => (
         </div>
         <div className="shopping_wrapper">
             <div className="shoplink jeans_shop">
-                <img src={jeansImage} alt="Jeans" />
+                <Link to="/shop">
+                    <img src={jeansImage} alt="Jeans" />
+                </Link>
                 <div className="title">
                     JEANS
                 </div>
             </div>
             <div className="shoplink shades_shop">
-                <img src={wearImage} alt="Shades" />
+                <Link to="/shop">
+                    <img src={wearImage} alt="Shades" />
+                </Link>
                 <div className="title">
                     SHADES
                 </div>

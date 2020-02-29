@@ -43,17 +43,18 @@ const InstagramGrid = ({bgColor}) => {
     }
     `);
     var lastFourImages = instaImages.slice(0,4);
-return(
+    
+    return(
     <InstagramWrapper bgColor={bgColor}>
         <div className="heading">
-            <span><a href="#">@vintagewearbyny</a></span>
+            <span><a href="https://www.instagram.com/vintagewearbyny/">@vintagewearbyny</a></span>
         </div>
         <div className="insta_wrapper">
 
         {
             lastFourImages.map((instaImage, i) => (
             <div className="image" key={instaImage.node.id}>
-                <img src={instaImage.node.localFile.childImageSharp.fixed.src} alt="Instagram image 1" />
+                <img src={instaImage.node.localFile.childImageSharp.fixed.src} alt={instaImage.node.caption} />
                 <div className="content" dangerouslySetInnerHTML={{ __html: instaImage.node.caption }} >
                 </div>
             </div>
