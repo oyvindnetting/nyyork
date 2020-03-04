@@ -10,6 +10,7 @@ const Header = ({theme}) => {
     return (
         <header>
             <nav className="navbar navbar-expand-lg navbar-dark navbar-fixed-top">
+            
                 <a className="navbar-brand" href="/">
                     <img src={Logo} alt="logo" />
                 </a>
