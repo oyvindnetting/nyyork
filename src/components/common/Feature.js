@@ -17,7 +17,7 @@ const Feature = ({color, bgColor, data}) => {
             <Link to={featureLink}>LES MER</Link>
         </div>
         <div className="image">
-            <img src={data[0].node.acf.featurebilde1_liten.localFile.childImageSharp.fluid.srcWebp} alt={data[0].node.acf.featureartikkel_1.post_title} />
+            <img src={data[0].node.acf.featurebilde1_liten.localFile.childImageSharp.fluid.src} alt={data[0].node.acf.featureartikkel_1.post_title} />
         </div>
     </FeatureWrapper>
     );

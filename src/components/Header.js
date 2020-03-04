@@ -4,38 +4,39 @@ import Logo from '../images/logo.png';
 import BritishFlag from '../images/british_flag.svg';
 
 import { Link } from 'gatsby';
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const Header = () => {
 
     return (
         <header>
             <nav className="navbar navbar-expand-lg navbar-dark navbar-fixed-top">
-                <Link  className="navbar-brand" to="/">
+                <AniLink fade className="navbar-brand" to="/">
                     <img src={Logo} alt="logo" />
-                </Link>
+                </AniLink>
            
                 <button className="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span className="dark-blue-text"><i className="fas fa-bars fa-1x"></i></span></button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item" >
-                            <Link to="/wear" className="nav-link" activeClassName="nav-active">
+                            <AniLink fade to="/wear" className="nav-link" activeClassName="nav-active">
                                 WEAR
-                            </Link>
+                            </AniLink>
                         </li>
                         <li className="nav-item">
-                            <Link   to="/jeans"  className="nav-link" activeClassName="nav-active">
+                            <AniLink fade to="/jeans"  className="nav-link" activeClassName="nav-active">
                                 JEANS
-                            </Link>
+                            </AniLink>
                         </li>
                         <li className="nav-item" >
-                            <Link   to="/shop"  className="nav-link" activeClassName="nav-active">
+                            <AniLink fade to="/shop"  className="nav-link" activeClassName="nav-active">
                                 SHOP
-                            </Link>
+                            </AniLink>
                         </li>
                         <li className="nav-item">
-                            <Link   to="/omoss"  className="nav-link" activeClassName="nav-active">
+                            <AniLink fade to="/omoss"  className="nav-link" activeClassName="nav-active">
                                 OM OSS
-                            </Link>
+                            </AniLink>
                         </li>
                     </ul>
                 </div>

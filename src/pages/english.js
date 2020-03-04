@@ -34,7 +34,7 @@ const EnglishPage = () => {
                                 localFile {
                                     childImageSharp {
                                         fluid(quality: 100, maxWidth:415) {
-                                            srcWebp
+                                            src
                                         }
                                     }
                                 }

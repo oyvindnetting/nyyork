@@ -21,7 +21,7 @@ const postTemplate = ({ data: { post }}) => {
                     <PostWrapper className="col-lg-12">
                     <div class="left">
                             <div class="image">
-                                <img src={post.featured_media.localFile.childImageSharp.fluid.srcWebp} alt={post.featured_media.alt_text} />
+                                <img src={post.featured_media.localFile.childImageSharp.fluid.src} alt={post.featured_media.alt_text} />
         
                             </div>
                             <div class="some">
@@ -65,7 +65,7 @@ export const pageQuery = graphql`
             localFile {
             childImageSharp {
                 fluid(quality: 100, maxWidth: 2000) {
-                    srcWebp
+                    src
                     }
                 }
             }

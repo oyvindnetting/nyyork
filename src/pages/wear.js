@@ -41,7 +41,7 @@ const WearPage = () => {
                                 localFile {
                                     childImageSharp {
                                         fluid(quality: 100, maxWidth:415) {
-                                            srcWebp
+                                            src
                                         }
                                     }
                                 }
@@ -53,7 +53,7 @@ const WearPage = () => {
                                 localFile {
                                     childImageSharp {
                                         fluid(quality: 100, maxWidth:415) {
-                                            srcWebp
+                                            src
                                         }
                                     }
                                 }

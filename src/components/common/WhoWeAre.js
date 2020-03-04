@@ -13,7 +13,7 @@ const WhoWeAre = ({color, data}) => {
                 </div>
             </div>
             <div className="image">
-                <img src={data[0].node.acf.hvem_er_vi_bilde.localFile.childImageSharp.fluid.srcWebp} alt="Feature" />
+                <img src={data[0].node.acf.hvem_er_vi_bilde.localFile.childImageSharp.fluid.src} alt="Feature" />
             </div>
         </WhoWeAreWrapper>
     );

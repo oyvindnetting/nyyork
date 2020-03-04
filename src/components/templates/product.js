@@ -19,16 +19,16 @@ const productTemplate = ({ data: { product } }) => {
                     <div className="left">
                         <div className="image">
                             <div className="product_image">
-                                <img src={product.images[0].localFile.childImageSharp.fluid.srcWebp} alt={product.name} />
+                                <img src={product.images[0].localFile.childImageSharp.fluid.src} alt={product.name} />
                             </div>
                             <div className="image_small">
-                                <img src={product.images[1].localFile.childImageSharp.fluid.srcWebp} alt={product.name} />
+                                <img src={product.images[1].localFile.childImageSharp.fluid.src} alt={product.name} />
                             </div>
                             <div className="image_small">
-                                <img src={product.images[2].localFile.childImageSharp.fluid.srcWebp} alt={product.name} />
+                                <img src={product.images[2].localFile.childImageSharp.fluid.src} alt={product.name} />
                             </div>
                             <div className="image_small">
-                                <img src={product.images[3].localFile.childImageSharp.fluid.srcWebp} alt={product.name} />
+                                <img src={product.images[3].localFile.childImageSharp.fluid.src} alt={product.name} />
                             </div>
                         </div>
                     </div>
@@ -68,7 +68,7 @@ export const pageQuery = graphql`
             localFile {
                 childImageSharp {
                     fluid(quality: 100, maxWidth: 1200) {
-                        srcWebp
+                        src
                     }
                 }
             }
