@@ -5,39 +5,35 @@ import BritishFlag from '../images/british_flag.svg';
 
 import { Link } from 'gatsby';
 
-const Header = ({theme}) => {
+const Header = () => {
 
     return (
         <header>
             <nav className="navbar navbar-expand-lg navbar-dark navbar-fixed-top">
-            
-                <a className="navbar-brand" href="/">
+                <Link  className="navbar-brand" to="/">
                     <img src={Logo} alt="logo" />
-                </a>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-      
-
+                </Link>
+           
+                <button className="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span className="dark-blue-text"><i className="fas fa-bars fa-1x"></i></span></button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item" >
-                            <Link to="/wear"  className="nav-link" activeClassName="nav-active">
+                            <Link to="/wear" className="nav-link" activeClassName="nav-active">
                                 WEAR
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/jeans"  className="nav-link" activeClassName="nav-active">
+                            <Link   to="/jeans"  className="nav-link" activeClassName="nav-active">
                                 JEANS
                             </Link>
                         </li>
                         <li className="nav-item" >
-                            <Link to="/shop"  className="nav-link" activeClassName="nav-active">
+                            <Link   to="/shop"  className="nav-link" activeClassName="nav-active">
                                 SHOP
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/omoss"  className="nav-link" activeClassName="nav-active">
+                            <Link   to="/omoss"  className="nav-link" activeClassName="nav-active">
                                 OM OSS
                             </Link>
                         </li>

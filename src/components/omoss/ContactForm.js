@@ -3,9 +3,7 @@ import { ContactFormWrapper } from './styles/ContactFormWrapper';
 
 const ContactForm = () => (
     <ContactFormWrapper>
-
-
-        <form name="contact" action="mailto:me@company.com" target="_new" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+        <form name="contact" action="mailto:me@company.com" target="_new" method="post" >
             <input type="hidden" name="bot-field" />
             <input type="hidden" name="form-name" value="contact" />
 

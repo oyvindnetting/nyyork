@@ -17,7 +17,7 @@ const ShopProduct = ({product}) => {
                     </div>
                 </div>
                 <div className="content">
-                    <div class="short_desc" dangerouslySetInnerHTML={{ __html: product.node.short_description }}></div>
+                    <div className="short_desc" dangerouslySetInnerHTML={{ __html: product.node.short_description }}></div>
                     <Link to={productLink}>LES MER OM PRODUKTET</Link>
                 </div>
             </div>

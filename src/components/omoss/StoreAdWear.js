@@ -4,7 +4,7 @@ import { StoreAdWearWrapper } from './styles/StoreAdWearWrapper';
 
 const StoreAdWear = () => (
     <StoreAdWearWrapper>
-        <div class="content">
+        <div className="content">
             <h3>VINTAGE WEAR</h3>
 
             <span>Åpningstider</span>
@@ -20,7 +20,7 @@ const StoreAdWear = () => (
 
 
         </div>
-        <div class="image">
+        <div className="image">
             <img src={StoreAdWearImage} alt="Wear Store" />
         </div>
     </StoreAdWearWrapper>

@@ -2,7 +2,7 @@ import React from 'react';
 import { ContactCardWrapper } from './styles/ContactCardWrapper';
 
 const ContactCard = () => (
-    <ContactCardWrapper classNameName="contact_info">
+    <ContactCardWrapper className="contact_info">
             <h2>KONTAKT OSS</h2>
             <div className="name">NY YORK VINTAGE</div>
             <div className="address">

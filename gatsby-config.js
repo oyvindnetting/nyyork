@@ -48,7 +48,7 @@ module.exports = {
        // Base URL of Wordpress site
         api: 'nyyork.no',
         // true if using https. false if nah.
-        https: false,
+        https: true,
         api_keys: {
           consumer_key: 'ck_4fa18fc13f5f95d13a29e3d5c59e93fe1b2143f8',
           consumer_secret: 'cs_07e402f1c530c52b2a9b1275a59bf9fb9f29bcb8',
@@ -63,6 +63,7 @@ module.exports = {
           username: 'vintagewearbyny',
         },
     },
+    `gatsby-plugin-transition-link`,
     `gatsby-plugin-favicon`,
     {
       resolve: `gatsby-plugin-favicon`,

@@ -4,10 +4,10 @@ import { StoreAdJeansWrapper } from './styles/StoreAdJeansWrapper';
 
 const StoreAdJeans = () => (
     <StoreAdJeansWrapper>
-        <div class="image">
+        <div className="image">
             <img src={StoreAdJeansImage} alt="Jeans Store" />
         </div>
-        <div class="content">
+        <div className="content">
             <h3>VINTAGE JEANS</h3>
 
             <span>Åpningstider</span>
