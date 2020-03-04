@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const HamburgerButton = styled.div`
   img {
-    position: fixed;
+    position: absolute;
     display: block;
     z-index: 1000;
     left: 45%;
