@@ -12,7 +12,7 @@ const Footer = () => {
                 <span>Ny York – Vintage & 2nd hand</span><br />
                 E-post: <a href="mailto:post@nyyork.no">post@nyyork.no</a><br />
                 Telefon: 92 44 94 42<br />
-                Markveien 58, Grünerløkka<br />
+                Thorvald Meyers gate 50, Grünerløkka<br />
                 Oslo, Norway<br />
             </div>
             <div className="some">

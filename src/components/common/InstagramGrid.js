@@ -14,11 +14,6 @@ const InstagramGrid = ({bgColor}) => {
                 node {
                     id
                     likes
-                    comments
-                    mediaType
-                    preview
-                    original
-                    timestamp
                     caption
                     localFile {
                         childImageSharp {
@@ -33,10 +28,7 @@ const InstagramGrid = ({bgColor}) => {
                     config_width
                     config_height
                     }
-                    dimensions {
-                    height
-                    width
-                    }
+               
                 }
             }
         }
