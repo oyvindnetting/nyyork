@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Ny York Vintage`,
-    description: `This is a web site for Ny York Vintage.`,
+    description: `Vintage Wear & Jeans.`,
     author: `@brungoth`,
   },
   plugins: [

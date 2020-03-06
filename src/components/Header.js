@@ -1,9 +1,6 @@
 import React from 'react';
 
 import Logo from '../images/logo.png';
-import BritishFlag from '../images/british_flag.svg';
-
-import { Link } from 'gatsby';
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const Header = () => {
@@ -29,8 +26,8 @@ const Header = () => {
                             </AniLink>
                         </li>
                         <li className="nav-item" >
-                            <AniLink fade to="/shop"  className="nav-link" activeClassName="nav-active">
-                                SHOP
+                            <AniLink fade to="/english"  className="nav-link" activeClassName="nav-active">
+                                ENGLISH
                             </AniLink>
                         </li>
                         <li className="nav-item">
@@ -42,15 +39,7 @@ const Header = () => {
                 </div>
 
             </nav>
-            <div className="shopping_english">
-    
-                <div className="english">
-         
-                    <Link to="/english" activeClassName="nav-active">
-                        <img src={BritishFlag} alt="british flag" />
-                    </Link>
-                </div>
-            </div>
+
         </header>  
     )
 }

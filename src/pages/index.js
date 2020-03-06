@@ -87,7 +87,7 @@ const IndexPage = () => {
 return (
     <Layout>
       <SEO title="Home" keywords={['ny york', 'vintage', 'jeans', 'shades']} />
-   
+    
        <ImageCarousel id="carousel" /> 
    
       <SectionWrapper id="frontpage01">
