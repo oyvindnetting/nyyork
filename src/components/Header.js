@@ -25,14 +25,14 @@ const Header = () => {
                                 JEANS
                             </AniLink>
                         </li>
-                        <li className="nav-item" >
-                            <AniLink fade to="/english"  className="nav-link" activeClassName="nav-active">
-                                ENGLISH
-                            </AniLink>
-                        </li>
                         <li className="nav-item">
                             <AniLink fade to="/omoss"  className="nav-link" activeClassName="nav-active">
                                 OM OSS
+                            </AniLink>
+                        </li>
+                        <li className="nav-item" >
+                            <AniLink fade to="/english"  className="nav-link" activeClassName="nav-active">
+                                ENGLISH
                             </AniLink>
                         </li>
                     </ul>
