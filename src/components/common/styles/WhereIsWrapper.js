@@ -10,12 +10,13 @@ export const WhereIsWrapper = styled.div`
     width: 85%;
     margin: 0 auto;
     @media screen and (min-width: 1024px) {
-        margin-bottom: 60px;
+        margin-bottom: 20px;
     }
     div.where_is_background {
         background: url(${bgImage});
         background-size:100%;      
-        
+        padding: 20px 0 40px 0;
+
         @media screen and (max-width: 1200px){
             background: url(${bgImageTablet});
             background-size:100%;  
