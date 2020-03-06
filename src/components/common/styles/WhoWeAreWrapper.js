@@ -15,6 +15,7 @@ export const WhoWeAreWrapper = styled.div`
         width: 70%;
         display: flex;
         flex-direction: row;
+        padding: 20px;
 
         @media screen and (max-width: 1024px){
             width: 98%;
