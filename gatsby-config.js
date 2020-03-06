@@ -63,13 +63,6 @@ module.exports = {
           username: 'vintagewearbyny'
         },
     },
-    {
-      resolve: `gatsby-source-instagram-all`,
-        options: {
-          type: `hashtag`,
-          hashtag: `vintagejeansbyny`,        
-        }
-    },
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-favicon`,
     {
