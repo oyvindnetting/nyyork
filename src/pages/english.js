@@ -33,7 +33,7 @@ const EnglishPage = () => {
                                 id
                                 localFile {
                                     childImageSharp {
-                                        fluid(quality: 100, maxWidth:415) {
+                                        fluid(quality: 100, maxHeight:350) {
                                             src
                                         }
                                     }

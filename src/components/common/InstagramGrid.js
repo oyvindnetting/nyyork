@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 
 
-const InstagramGrid = ({bgColor}) => {
+const InstagramGrid = ({bgColor, nextInsta}) => {
     const {   instaImages: { edges: instaImages },
     } = useStaticQuery(graphql`
     query instagram {
@@ -34,12 +34,13 @@ const InstagramGrid = ({bgColor}) => {
         }
     }
     `);
-    var lastFourImages = instaImages.slice(0,4);
-    
+
+    var lastFourImages = (nextInsta === 'next_four') ?  instaImages.slice(5,9) : instaImages.slice(0,4);
+        
     return(
     <InstagramWrapper bgColor={bgColor}>
         <div className="heading">
-            <span><a href="https://www.instagram.com/vintagewearbyny/">@vintagewearbyny</a></span>
+            <span><a href="https://www.instagram.com/vintagewearbyny/" target="_blank">@vintagewearbyny</a></span>
         </div>
         <div className="insta_wrapper">
 
@@ -60,7 +61,8 @@ const InstagramGrid = ({bgColor}) => {
 
 
 InstagramGrid.propTypes = {
-    bgColor: PropTypes.string
+    bgColor: PropTypes.string,
+    nextInsta: PropTypes.string
 }
 
 

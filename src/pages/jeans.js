@@ -87,7 +87,7 @@ const JeansPage = () => {
             </SectionWrapper>
     
             <SectionWrapper id="jeans05" >
-                <InstagramGrid bgColor={nyYorkColors.gray} />
+                <InstagramGrid bgColor={nyYorkColors.gray} nextInsta="next_four" />
             </SectionWrapper>
 
        </Layout>

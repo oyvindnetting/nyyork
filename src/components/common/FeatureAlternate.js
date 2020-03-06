@@ -6,10 +6,10 @@ import { FeatureAlternateWrapper } from './styles/FeatureAlternateWrapper';
 
 const FeatureAlternate = ({color, bgColor, data}) => {
     
-    const featureLink = (data[0].node.acf.featureartikkel_2  === undefined) ? "/articles/"+data[0].node.acf.featureartikkel_1.post_name : data[0].node.acf.featureartikkel_2.post_name;
+    const featureLink = (data[0].node.acf.featureartikkel_2  === undefined) ? "/articles/"+data[0].node.acf.featureartikkel_1.post_name :  "/articles/"+data[0].node.acf.featureartikkel_2.post_name;
     const featureBilde = (data[0].node.acf.featurebilde2_liten === undefined) ? data[0].node.acf.featurebilde1_liten.localFile.childImageSharp.fluid.src : data[0].node.acf.featurebilde2_liten.localFile.childImageSharp.fluid.src;
-    const featureTitle =  (data[0].node.acf.featureartikkel_2 === undefined) ? data[0].node.acf.featureartikkel_1.post_name : data[0].node.acf.featureartikkel_2.post_name;
-    const featureExcerpt = (data[0].node.acf.featureartikkel_2 === undefined) ? data[0].node.acf.featureartikkel_1.post_excerpt : data[0].node.acf.featureartikkel_1.post_excerpt;
+    const featureTitle =  (data[0].node.acf.featureartikkel_2 === undefined) ? data[0].node.acf.featureartikkel_1.post_title : data[0].node.acf.featureartikkel_2.post_title;
+    const featureExcerpt = (data[0].node.acf.featureartikkel_2 === undefined) ? data[0].node.acf.featureartikkel_1.post_excerpt : data[0].node.acf.featureartikkel_2.post_excerpt;
     return (
         <FeatureAlternateWrapper color={color} bgColor={bgColor}>
             <div className="image">
