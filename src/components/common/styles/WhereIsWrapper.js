@@ -14,8 +14,8 @@ export const WhereIsWrapper = styled.div`
     }
     div.where_is_background {
         background: url(${bgImage});
-        background-size:100%;      
-        padding: 20px 0 40px 0;
+        background-size: 100%;      
+        padding-bottom: 50px ;
 
         @media screen and (max-width: 1200px){
             background: url(${bgImageTablet});
