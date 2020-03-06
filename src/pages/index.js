@@ -108,9 +108,7 @@ return (
         <FeatureAlternate bgColor={nyYorkColors.gray} color={nyYorkColors.yellow} data={data} />
         <Ad type="wear" />
       </SectionWrapper>
-      <SectionWrapper id="frontpage06">
-        <ShopShortcuts  />
-      </SectionWrapper>
+
     </Layout>
 );
 }

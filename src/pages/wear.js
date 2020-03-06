@@ -91,9 +91,6 @@ const WearPage = () => {
                 <InstagramGrid  bgColor={nyYorkColors.pink}  />
             </SectionWrapper>
 
-            <SectionWrapper id="wear06">
-                <ShopShortcuts  />
-            </SectionWrapper>
     </Layout>   
     );
 }
