@@ -10,7 +10,7 @@ import WhereIs from '../components/common/WhereIs';
 import Ad from '../components/common/Ad';
 import FeatureAlternate from '../components/common/FeatureAlternate';
 import InstagramGrid from '../components/common/InstagramGrid';
-import ShopShortcuts from '../components/common/ShopShortcuts';
+
 import WearTop from '../components/wear/WearTop';
 
 import '../components/styles/styles.scss';
@@ -70,7 +70,7 @@ const WearPage = () => {
             <SEO title="Wear" keywords={['ny york', 'vintage', 'wear']} />
 
             <SectionWrapper id="wear01">
-                <WearTop />
+                <WearTop data={data} />
             </SectionWrapper>
 
             <SectionWrapper id="wear02">

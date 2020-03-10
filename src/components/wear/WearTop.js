@@ -2,7 +2,7 @@ import React from 'react';
 import wearTopImage from '../../images/wear_top.png';
 import { WearTopWrapper } from './styles/WearTopWrapper';
 
-const WearTop = () => (
+const WearTop = ({data}) => (
     <WearTopWrapper>
         <div className="content">
             <img src={wearTopImage} alt="WEAR" />

@@ -103,7 +103,7 @@ export const FeatureAlternateWrapper = styled.div`
 
     div.image {
         width: 35%;
-        margin: 10px 35px 10px -150px;
+        margin: auto 35px auto -150px;
 
         @media screen and (max-width: 768px) {
             margin-left: -250px;

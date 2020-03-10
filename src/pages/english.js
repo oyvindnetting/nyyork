@@ -55,7 +55,7 @@ const EnglishPage = () => {
                 </SectionWrapper>
         
                 <SectionWrapper id="omoss02">
-                    <WhoWeAre color="pink" data={data} />
+                    <WhoWeAre color="pink" topMargin="50px" data={data} />
                 </SectionWrapper>
                 
                 <SectionWrapper id="omoss03">

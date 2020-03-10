@@ -89,7 +89,7 @@ export const FeatureWrapper = styled.div`
 
     div.image {
         width: 35%;
-        margin: 12px auto;
+        margin:  auto;
         @media screen and (max-width: 768px) {
             margin: auto;
         }

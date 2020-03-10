@@ -17,6 +17,8 @@ export const WhoWeAreWrapper = styled.div`
         flex-direction: row;
         padding: 10px;
 
+
+
         @media screen and (max-width: 1024px){
             width: 98%;
         }
@@ -59,7 +61,9 @@ export const WhoWeAreWrapper = styled.div`
 
         div.image {
             width: 40%;
-            margin: 12px;
+            margin: 15px 0px;
+
+
             img {
                 -webkit-box-shadow: -10px 2px 14px 0px rgba(0,0,0,0.75);
                 -moz-box-shadow: -10px 2px 14px 0px rgba(0,0,0,0.75);
@@ -73,6 +77,8 @@ export const WhoWeAreWrapper = styled.div`
                 width: 99%;
             }
         }
+
+
 
         &:after {
                 padding-top: 47%;

@@ -10,7 +10,7 @@ import WhereIs from '../components/common/WhereIs';
 import Ad from '../components/common/Ad';
 import Feature from '../components/common/Feature';
 import InstagramGrid from '../components/common/InstagramGrid';
-import ShopShortcuts from '../components/common/ShopShortcuts';
+
 import JeansTop from '../components/jeans/JeansTop';
 
 import '../components/styles/styles.scss';

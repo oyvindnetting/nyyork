@@ -17,7 +17,6 @@ import Ad from '../components/common/Ad';
 import Feature from '../components/common/Feature';
 import InstagramGrid from '../components/common/InstagramGrid';
 import FeatureAlternate from '../components/common/FeatureAlternate';
-import ShopShortcuts from '../components/common/ShopShortcuts';
 
 import { SectionWrapper } from '../components/common/SectionWrapper';
 
