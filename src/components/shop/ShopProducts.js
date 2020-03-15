@@ -7,28 +7,46 @@ import { ShopProductsWrapper } from './styles/ShopProductsWrapper';
 
 
 const ShopProducts = () => {
+
     const {
         products: { edges: products },
       } = useStaticQuery(graphql`
         query products {
-          products: allWcProducts {
+          products:  allShopifyProduct {
                 edges {
                     node {
                         id
-                        slug
+                        title
+                        descriptionHtml
+                        handle
+                        productType
                         images {
-                            id
-                            src
+                            localFile {
+                                childImageSharp {
+                                    fluid {
+                                        src
+                                    }
+                                }
+                            }
                         }
-                        name
-                        price
-                        description
-                        short_description
+                        priceRange {
+                            minVariantPrice {
+                                amount
+                                currencyCode
+                            }
+                            maxVariantPrice {
+                                amount
+                                currencyCode
+                            }
+                        }
                     }
                 }
             }
+        
         }
       `);
+
+    console.log(products);
     return (
         <ShopProductsWrapper>
             {products.map((product, i) => (

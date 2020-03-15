@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header>
       <nav className="navbar navbar-expand-lg navbar-dark navbar-fixed-top">
-        <Link fade className="navbar-brand" to="/">
+        <Link className="navbar-brand" to="/">
           <img src={Logo} alt="logo" />
         </Link>
 

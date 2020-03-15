@@ -31,29 +31,7 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-      allWcProducts {
-        edges {
-            node {
-                id
-                slug
-                images {
-                    id
-                    src
-                    localFile {
-                      childImageSharp {
-                        fluid(quality: 100, maxWidth: 1200) {
-                          srcWebp
-                        }
-                      }
-                    }
-                }
-                name
-                price
-                description
-            }
-        }
-      }
-    }
+
   `);
 
   // Check for errors
@@ -77,7 +55,7 @@ exports.createPages = async ({ graphql, actions }) => {
       });
     }
   });
-
+/*
   allWcProducts.edges.forEach(edge => {
 
       createPage({
@@ -88,5 +66,5 @@ exports.createPages = async ({ graphql, actions }) => {
         },
       });
    });
-
+*/
 };

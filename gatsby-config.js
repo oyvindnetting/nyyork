@@ -42,20 +42,42 @@ module.exports = {
         },
       },
     },
-    {       
-      resolve: "@pasdo501/gatsby-source-woocommerce",
+    {
+      resolve: "gatsby-source-shopify",
       options: {
-       // Base URL of Wordpress site
-        api: 'admin.nyyork.no',
-        // true if using https. false if nah.
-        https: true,
-        api_keys: {
-          consumer_key: 'ck_4fa18fc13f5f95d13a29e3d5c59e93fe1b2143f8',
-          consumer_secret: 'cs_07e402f1c530c52b2a9b1275a59bf9fb9f29bcb8',
-        },
-        // Array of strings with fields you'd like to create nodes for...
-        fields: ['products', 'products/categories', 'products/attributes']
-      }
+        // The domain name of your Shopify shop. This is required.
+        // Example: 'gatsby-source-shopify-test-shop' if your Shopify address is
+        // 'gatsby-source-shopify-test-shop.myshopify.com'.
+        // If you are running your shop on a custom domain, you need to use that
+        // as the shop name, without a trailing slash, for example:
+        // shopName: "gatsby-shop.com",
+        shopName: "nyyorkvintage",
+  
+        // An API access token to your Shopify shop. This is required.
+        // You can generate an access token in the "Manage private apps" section
+        // of your shop's Apps settings. In the Storefront API section, be sure
+        // to select "Allow this app to access your storefront data using the
+        // Storefront API".
+        // See: https://help.shopify.com/api/custom-storefronts/storefront-api/getting-started#authentication
+        accessToken: "3c9636e135b756e8269b2818a9ce846c",
+  
+        // Set the API version you want to use. For a list of available API versions,
+        // see: https://help.shopify.com/en/api/storefront-api/reference/queryroot
+        // Defaults to 2019-07
+        apiVersion: "2020-01",
+  
+        // Set verbose to true to display a verbose output on `npm run develop`
+        // or `npm run build`. This prints which nodes are being fetched and how
+        // much time was required to fetch and process the data.
+        // Defaults to true.
+        verbose: true,
+  
+  
+        // List of collections you want to fetch.
+        // Possible values are: 'shop' and 'content'.
+        // Defaults to ['shop', 'content'].
+        includeCollections: ['shop'],
+      },
     },
     {
       resolve: 'gatsby-source-instagram',

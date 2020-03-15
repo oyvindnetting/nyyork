@@ -5,30 +5,35 @@ import { Link } from "gatsby";
 import { ShopProductWrapper } from "./styles/ShopProductWrapper";
 
 const ShopProduct = ({ product }) => {
-  const productLink = "/shop/" + product.node.slug;
+
+  const productLink = "https://nyyorkvintage.myshopify.com/collections/jeans/products/" + product.node.handle;
+  
+  let desc = product.node.descriptionHtml.substring(0, 400);
+  var n = desc.lastIndexOf(". ");
+  let descTrimmed = desc.substring(n+1,-1);
 
   return (
     <ShopProductWrapper>
       <div className="product">
         <div className="image">
-          <Link to={productLink}>
+          <a href={productLink} target="_blank">
             <img
-              src={product.node.images[0].src}
-              alt={product.node.images[0].alt}
+              src={product.node.images[0].localFile.childImageSharp.fluid.src}
+              alt={product.node.title}
             />
-          </Link>
-          <div className="product_title">{product.node.name}</div>
+          </a>
+          <div className="product_title">{product.node.title}</div>
 		  <div
             className="price"
-          >{product.node.price } kr</div>
+          >{product.node.priceRange.minVariantPrice.amount } kr</div>
         </div>
         <div className="content">
           <div
             className="short_desc"
-            dangerouslySetInnerHTML={{ __html: product.node.short_description }}
+            dangerouslySetInnerHTML={{ __html: descTrimmed }}
           ></div>
 
-          <Link to={productLink}>LES MER OM PRODUKTET</Link>
+          <a href={productLink} target="_blank">LES MER OM PRODUKTET</a>
         </div>
       </div>
     </ShopProductWrapper>

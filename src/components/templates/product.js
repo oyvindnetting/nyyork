@@ -66,25 +66,6 @@ productTemplate.propTypes = {
 export default productTemplate;
 
 
-export const pageQuery = graphql`
-  query($id: String!) {
-    product: wcProducts(slug: { eq: $id }) {
-        id
-        slug
-        images {
-            id
-            localFile {
-                childImageSharp {
-                    fluid(quality: 100, maxWidth: 1200) {
-                        src
-                    }
-                }
-            }
 
-        }
-        name
-        price
-        description
-    }
-  }
-`;
+
+
