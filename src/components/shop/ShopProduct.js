@@ -25,7 +25,7 @@ const ShopProduct = ({ product }) => {
           <div className="product_title">{product.node.title}</div>
 		  <div
             className="price"
-          >{product.node.priceRange.minVariantPrice.amount } kr</div>
+          >{product.node.priceRange.minVariantPrice.amount.substring(0,product.node.priceRange.minVariantPrice.amount.length - 2) } kr</div>
         </div>
         <div className="content">
           <div
