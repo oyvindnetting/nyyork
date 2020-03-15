@@ -10,6 +10,7 @@ import FacebookIcon from '../../images/facebook_icon_yellow.svg';
 import MailIcon from '../../images/mail_icon_yellow.svg';
 
 
+
 const postTemplate = ({ data: { post }}) => {
 
     return(

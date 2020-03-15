@@ -71,7 +71,7 @@ export const WhereIsWrapper = styled.div`
             }
             div {
                 width: 40%;
-                font-size: 1rem;
+                font-size: .9rem;
                 color: ${nyYorkColors.black};
                 font-weight: bold;
 

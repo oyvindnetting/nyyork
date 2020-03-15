@@ -42,6 +42,7 @@
     "sass-extract": "^2.1.0",
     "sass-extract-js": "^0.4.0",
     "sass-extract-loader": "^1.1.0",
+    "simple-react-lightbox": "^2.5.3",
     "slash": "^3.0.0",
     "styled-components": "^4.2.0"
   },

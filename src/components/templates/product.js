@@ -6,6 +6,8 @@ import Layout from '../layout';
 import { SectionWrapper } from '../common/SectionWrapper';
 import { ProductWrapper } from './styles/ProductWrapper';
 
+import SimpleReactLightbox from "simple-react-lightbox"; // Import Simple React Lightbox
+import { SRLWrapper } from "simple-react-lightbox"; // Import SRLWrapper
 
 
 const productTemplate = ({ data: { product } }) => {
@@ -13,39 +15,45 @@ const productTemplate = ({ data: { product } }) => {
     return (
         <Layout>
             <SEO title="Produkt" keywords={['ny york', 'shop', 'product']} />
+			<SimpleReactLightbox>
+				<SectionWrapper>
+					<ProductWrapper>
+						<div className="left">
+							<div className="image">
+								<SRLWrapper>
+									<div className="thumbs">
+										<div className="image_small">
+											<img src={product.images[0].localFile.childImageSharp.fluid.src} alt={product.name} />
+										</div>						
+										<div className="image_small">
+											<img src={product.images[1].localFile.childImageSharp.fluid.src} alt={product.name} />
+										</div>
+										<div className="image_small">
+											<img src={product.images[2].localFile.childImageSharp.fluid.src} alt={product.name} />
+										</div>
+										<div className="image_small">
+											<img src={product.images[3].localFile.childImageSharp.fluid.src} alt={product.name} />
+										</div>
+									</div>
 
-            <SectionWrapper>
-                <ProductWrapper>
-                    <div className="left">
-                        <div className="image">
-                            <div className="product_image">
-                                <img src={product.images[0].localFile.childImageSharp.fluid.src} alt={product.name} />
-                            </div>
-                            <div className="image_small">
-                                <img src={product.images[1].localFile.childImageSharp.fluid.src} alt={product.name} />
-                            </div>
-                            <div className="image_small">
-                                <img src={product.images[2].localFile.childImageSharp.fluid.src} alt={product.name} />
-                            </div>
-                            <div className="image_small">
-                                <img src={product.images[3].localFile.childImageSharp.fluid.src} alt={product.name} />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="right">
-                        <h1>{product.name}</h1>
-                        <div className="price"><span>Pris: </span>{product.price} kr</div>
-                        <div className="product_desc" dangerouslySetInnerHTML={{ __html: product.description}}>
-                            
-                        </div>
-                        <div className="buy_button">
-                            <input type="text" maxlength="1" value="1" />
-                            <button>Kjøp</button>
-                        </div>
-                    </div>
+								</SRLWrapper>
+							</div>
+						</div>
+						<div className="right">
+							<h1>{product.name}</h1>
+							<div className="price"><span>Pris: </span>{product.price} kr</div>
+							<div className="product_desc" dangerouslySetInnerHTML={{ __html: product.description}}>
+								
+							</div>
+							<div className="buy_button">
+								<input type="text" maxlength="1" value="1" />
+								<button>Kjøp</button>
+							</div>
+						</div>
 
-                </ProductWrapper>
-            </SectionWrapper>
+					</ProductWrapper>
+				</SectionWrapper>
+			</SimpleReactLightbox>
         </Layout>
     );
 }

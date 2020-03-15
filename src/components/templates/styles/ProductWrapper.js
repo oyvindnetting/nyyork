@@ -28,6 +28,7 @@ export const ProductWrapper = styled.article`
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-between;
+			margin: auto;
 
             div {
                 margin: 10px 5px;
@@ -41,19 +42,28 @@ export const ProductWrapper = styled.article`
                     border: 2px solid ${nyYorkColors.beige};
                 }
             }
-            div.image_small {
-                width: 25%;
-                cursor: pointer;
 
-                img {
-                    width: 100%;
-                    border: 2px solid ${nyYorkColors.beige};
-                }
-            }
+			div.thumbs {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				margin: 0;
+				padding: 0;
+				div.image_small {
+					width: 47%;
+					float:right;
+					cursor: pointer;
 
-            &> .image_small ~ .image_small { 
-                opacity: 0.5;
-            }
+					img {
+						width: 100%;
+						border: 2px solid ${nyYorkColors.beige};
+					}
+				}
+
+
+			}
+
         }
     }
 
@@ -90,6 +100,11 @@ export const ProductWrapper = styled.article`
 
         div.product_desc {
             font-size: 1.3rem;
+			color: ${nyYorkColors.beige};	
+			th, td {
+				color: ${nyYorkColors.beige};	
+			} 
+
         }
 
         div.buy_button {

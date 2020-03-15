@@ -28,7 +28,7 @@ export const ShopProductWrapper = styled.div`
             font-family: 'Poppins', 'Open Sans', Arial, Helvetica, sans-serif;
             font-weight: 700;
             font-style: italic;
-            font-size: 1.8rem;
+            font-size: 2.5rem;
             color: ${nyYorkColors.yellow};
             text-transform: uppercase;
         }
@@ -41,10 +41,20 @@ export const ShopProductWrapper = styled.div`
             transform: scale(1.03); 
         }
 
+		div.price {
+			text-align:center;
+			background-color: ${nyYorkColors.black};
+			font-family: 'Poppins', 'Open Sans', Arial, Helvetica, sans-serif;
+			font-size: 2.5rem;
+			font-weight: 900;
+			color: ${nyYorkColors.beige};
+		}
+
     }
 
     div.content {
         background-color: ${nyYorkColors.gray};
+        border: 1px solid ${nyYorkColors.black};
         &.--pink {
             background-color: ${nyYorkColors.pink};
         } 
@@ -54,19 +64,20 @@ export const ShopProductWrapper = styled.div`
         font-size: 1.1rem;
         text-align: center;
 
- 
+
+
         a {
             display: block;
             font-family: 'Poppins', 'Open Sans', Arial, Helvetica, sans-serif;
-            font-weight: 400;
+            font-weight: 600;
             outline: none;
-            background-color: ${nyYorkColors.yellow};
-            color: ${nyYorkColors.black};
+            background-color: ${nyYorkColors.black};
+            color: ${nyYorkColors.beige};
             border: 0;
             margin-top: 50px;
             padding: 10px 30px;
             cursor: pointer;
-
+			${dropShadow('0px', '5px', '5px')};
             transition: transform 0.5s;
             &:hover {
                 transform: scale(1.05); 

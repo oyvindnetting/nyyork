@@ -50,7 +50,7 @@ export const Overlay = styled.div`
         text-decoration: none;
         font-family: 'Poppins', 'Open Sans', Arial, Helvetica, sans-serif;
         font-weight: 500;
-        font-size: 2.7rem;
+        font-size: 2.2rem;
         -webkit-text-stroke-width: 2px;
         -webkit-text-stroke-color: ${nyYorkColors.yellow};
         color: ${nyYorkColors.gray} !important;

@@ -1,9 +1,8 @@
 
 import styled from 'styled-components';
 import nyYorkColors from '../../constants/colors';
-import { dropShadow } from '../../common/mixins';
 
-export const PostWrapper = styled.article`
+export const PostWrapper2 = styled.article`
 
 background-color: ${nyYorkColors.gray};
         display: flex;
@@ -17,24 +16,13 @@ background-color: ${nyYorkColors.gray};
                  width: 100%;
              }
              div.image {
-				z-index: 0;
+ 
                  img {
-					 position: absolute;
-					 top: 0;
-					 left: 0;
-		
                      width: 100%;
                  }
              }
              div.some {
-				z-index: 100;
-				text-align: right;
-				position: absolute;
-				top: 60%;
-				left: 0;
-				
-                background-color: ${nyYorkColors.gray};
-		
+                 text-align: right;
                  h3 {
                      font-family: 'Poppins', 'Open Sans', Arial, Helvetica, sans-serif;
                      font-weight: 800;
@@ -52,8 +40,6 @@ background-color: ${nyYorkColors.gray};
  
          } 
          div.right {
-			z-index: 100;
-			background-color: rgba(0,0,0,0.7);
              width: 50%;
              @media screen and (max-width: 415px) {
                  width: 100%;
@@ -70,7 +56,7 @@ background-color: ${nyYorkColors.gray};
                      font-weight:200;
                      font-style: italic;
                      color: ${nyYorkColors.black};
-                     font-size: 4rem;
+                     font-size: 5rem;
                      text-transform: uppercase;
                      @media screen and (max-width: 415px) {
                          font-size: 3rem;
@@ -88,7 +74,6 @@ background-color: ${nyYorkColors.gray};
              div.body {
                  margin: 35px;
                  font-size: 1.2rem;
-				 color: ${nyYorkColors.beige};
  
              }
          } 

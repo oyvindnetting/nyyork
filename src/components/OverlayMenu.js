@@ -36,6 +36,11 @@ const OverlayMenu = ({ menuOpen, callback }) => {
                   OM OSS
               </Link>
           </li>     
+          <li className="nav-item">
+              <Link to="/english"  className="nav-link" activeClassName="nav-active">
+                  ENGLISH
+              </Link>
+          </li>     
         </ul>
         <div
           className="closeButton"
