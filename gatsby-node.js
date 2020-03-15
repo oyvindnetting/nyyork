@@ -31,6 +31,7 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+    } 
 
   `);
 
@@ -55,16 +56,6 @@ exports.createPages = async ({ graphql, actions }) => {
       });
     }
   });
-/*
-  allWcProducts.edges.forEach(edge => {
 
-      createPage({
-        path: `/shop/${edge.node.slug}`,
-        component: slash(productTemplate),
-        context: {
-          id: edge.node.slug,
-        },
-      });
-   });
-*/
+
 };
