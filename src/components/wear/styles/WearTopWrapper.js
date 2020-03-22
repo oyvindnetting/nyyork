@@ -5,7 +5,8 @@ import wearTopBackground from '../../../images/wear_top_background.jpg';
 
 export const WearTopWrapper = styled.div`
 
-background-image: url(${wearTopBackground});
+
+background-image: url(${props => props.data[0].node.acf.toppbilde.localFile.childImageSharp.fluid.src});
 background-size: cover;
 background-repeat: no-repeat;
 div.content {

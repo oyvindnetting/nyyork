@@ -18,9 +18,7 @@ const ShopPage = () => (
         <SectionWrapper id="shop01">
             <ShopTop />
         </SectionWrapper>
-        <SectionWrapper id="shop02">
-            <ShopCategory />
-        </SectionWrapper>
+
 
         <SectionWrapper id="shop03">
             <ShopProducts  />

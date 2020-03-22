@@ -27,7 +27,7 @@ export const ShopProductWrapper = styled.div`
 
             font-family: 'Poppins', 'Open Sans', Arial, Helvetica, sans-serif;
             font-weight: 700;
-            font-style: italic;
+           
             font-size: 2.5rem;
             color: ${nyYorkColors.yellow};
             text-transform: uppercase;
@@ -46,7 +46,8 @@ export const ShopProductWrapper = styled.div`
 			background-color: ${nyYorkColors.black};
 			font-family: 'Poppins', 'Open Sans', Arial, Helvetica, sans-serif;
 			font-size: 2.5rem;
-			font-weight: 900;
+			font-weight: 400;
+			$
 			color: ${nyYorkColors.beige};
 		}
 

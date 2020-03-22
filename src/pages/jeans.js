@@ -57,7 +57,16 @@ const JeansPage = () => {
                                         }
                                     }
                                 }
-                            }
+							}
+							toppbilde {
+								localFile {
+									childImageSharp {
+                                        fluid(quality: 100, maxWidth:1200) {
+                                            src
+                                        }
+                                    }
+								}
+							}
                           }
                       }
                   }
@@ -69,7 +78,7 @@ const JeansPage = () => {
             <SEO title="Jeans" keywords={['ny york', 'vintage', 'wear']} />
     
             <SectionWrapper id="jeans01">
-                <JeansTop />
+                <JeansTop data={data} />
             </SectionWrapper>
     
             <SectionWrapper id="jeans02">

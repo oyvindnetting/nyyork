@@ -57,7 +57,16 @@ const WearPage = () => {
                                         }
                                     }
                                 }
-                            }
+							}
+							toppbilde {
+								localFile {
+									childImageSharp {
+                                        fluid(quality: 100, maxWidth:1200) {
+                                            src
+                                        }
+                                    }
+								}
+							}
                           }
                       }
                   }

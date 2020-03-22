@@ -5,7 +5,7 @@ import jeansTopBackground from '../../../images/jeans_top_background.jpg';
 
 export const JeansTopWrapper = styled.div`
 
-background-image: url(${jeansTopBackground});
+background-image: url(${props => props.data[0].node.acf.toppbilde.localFile.childImageSharp.fluid.src});
 background-size: cover;
 background-repeat: no-repeat;
 

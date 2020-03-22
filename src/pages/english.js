@@ -38,7 +38,16 @@ const EnglishPage = () => {
                                         }
                                     }
                                 }
-                            }
+							}
+							toppbilde {
+								localFile {
+									childImageSharp {
+                                        fluid(quality: 100, maxWidth:1200) {
+                                            src
+                                        }
+                                    }
+								}
+							}
                           }
                       }
                   }
@@ -51,7 +60,7 @@ const EnglishPage = () => {
                 <SEO title="English" keywords={['ny york', 'vintage', 'wear']} />
         
                 <SectionWrapper id="omoss01">
-                    <AboutUsTop />
+                    <AboutUsTop data={data} />
                 </SectionWrapper>
         
                 <SectionWrapper id="omoss02">
