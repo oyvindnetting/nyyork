@@ -46,7 +46,7 @@ const Header = () => {
             </li>
             <li className="nav-item">
               <Link
-                to="/shop"
+                to="https://nyyorkvintage.myshopify.com/"
                 className="nav-link"
                 activeClassName="nav-active"
               >
