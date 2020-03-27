@@ -45,13 +45,13 @@ const Header = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                to="https://nyyorkvintage.myshopify.com/"
+              <a
+                href="https://nyyorkvintage.myshopify.com/"
                 className="nav-link"
                 activeClassName="nav-active"
               >
                 SHOP
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
               <Link
