@@ -13,10 +13,31 @@ export const WhereIsWrapper = styled.div`
         margin-bottom: 20px;
     }
     div.where_is_background {
-        background: url(${bgImage});
+
         background-size: 100%;      
         padding-bottom: 50px ;
+        position: relative;
+        z-index: 1;
 
+        .bgImage {
+            position: absolute;
+            left:0;
+            top:0;
+            z-index: -1;
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+        .nyYorkMap {
+            position: absolute;
+            right:0;
+            top:7%;
+            z-index: -3;
+            width: 65%;
+            height: 63%;
+            border: 30px solid #66768c;
+        }
         @media screen and (max-width: 1200px){
             background: url(${bgImageTablet});
             background-size:100%;  
@@ -42,6 +63,8 @@ export const WhereIsWrapper = styled.div`
         
         div.content {
             padding: 80px 25px;
+            z-index: 20;
+            width: 40%;
             @media screen and (max-width: 768px){
                 
                 padding: 40px 25px;
@@ -70,7 +93,7 @@ export const WhereIsWrapper = styled.div`
     
             }
             div {
-                width: 40%;
+
                 font-size: .9rem;
                 color: ${nyYorkColors.black};
                 font-weight: bold;
@@ -106,7 +129,7 @@ export const WhereIsWrapper = styled.div`
         }
 
         &:after {
-                padding-top: 5%;
+                padding-top: 10%;
                 @media screen and (max-width: 1200px){ 
                     padding-top: 20%;
                 }
