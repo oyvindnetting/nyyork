@@ -9,6 +9,7 @@ import { PostWrapper } from './styles/PostWrapper';
 import FacebookIcon from '../../images/facebook_icon_yellow.svg';
 import MailIcon from '../../images/mail_icon_yellow.svg';
 import { location } from '@reach/router';
+import MetaTags from 'react-meta-tags';
 
 import {
     EmailShareButton,
@@ -19,7 +20,13 @@ const postTemplate = ({ data: { post }, location}) => {
     const url = location.href ? location.href : '';
     return(
         <Layout>
-            <SEO title={post.title} keywords={['ny york', 'vintage', 'wear']} />
+           <MetaTags>
+            <title>Page 1</title>
+            <meta name="description" content="Ny York Vintage" />
+            <meta property="og:title" content={post.title} />
+            <meta property="og:image" content={post.featured_media.localFile.childImageSharp.fluid.src}  />
+          </MetaTags>
+            <SEO title={post.title} keywords={['ny york', 'vintage', 'wear']} ogImage={post.featured_media.localFile.childImageSharp.fluid.src}  />
 
             <div className="container">
                 <div className="row" style={{ marginBottom: '40px' }}>
