@@ -69,10 +69,7 @@ export const WhoWeAreWrapper = styled.div`
                 -moz-box-shadow: -10px 2px 14px 0px rgba(0,0,0,0.75);
                 box-shadow: -10px 2px 14px 0px rgba(0,0,0,0.75);
             
-                max-width: 500px;
-                @media screen and (max-width: 415px) {
-                    max-width: 300px;
-                }
+                max-width: 300px;
             
             }
 
