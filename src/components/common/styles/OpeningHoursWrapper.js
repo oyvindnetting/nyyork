@@ -14,7 +14,7 @@ export const OpeningHoursWrapper = styled.div`
     background-repeat:no-repeat;
     background-size:100%;      
     position: relative;
-    padding: 40px 55px;
+    padding: 50px 55px;
 
     color: ${props => 
         ((props.color === 'pink') && nyYorkColors.beige) || ((props.color === 'gray') && nyYorkColors.beige) 

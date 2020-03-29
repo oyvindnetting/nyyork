@@ -20,7 +20,11 @@ body {
   font-size: 12pt;
   overscroll-behavior: none;
   background-color: #605b63;
-  background: url("../../images/background.jpg") no-repeat bottom center fixed;
+  @media screen and (min-width: 415px) {
+    background: url("../../images/background.jpg") no-repeat bottom center fixed;
+    
+  }
+  
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

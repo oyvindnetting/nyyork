@@ -20,6 +20,10 @@ import FeatureAlternate from '../components/common/FeatureAlternate';
 
 import { SectionWrapper } from '../components/common/SectionWrapper';
 
+import ShopTop from '../components/shop/ShopTop';
+import ShopProducts from '../components/shop/ShopProducts';
+
+
 const IndexPage = () => {
   const {
       data: { edges: data },
@@ -89,17 +93,21 @@ return (
     
        <ImageCarousel id="carousel" /> 
    
-      <SectionWrapper id="frontpage01">
-        <WhereIs data={data} />        
+       <SectionWrapper id="frontpage03">
+        <Feature color={nyYorkColors.pink} bgColor={nyYorkColors.yellow} data={data} />  
+        <Ad type="jeans" />
       </SectionWrapper>
       <SectionWrapper id="frontpage02">
         <OpeningHours  color="pink" store="wear" data={data} />
         <WhoWeAre data={data} />
       </SectionWrapper>
-      <SectionWrapper id="frontpage03">
-        <Ad type="jeans" />
-        <Feature color={nyYorkColors.pink} bgColor={nyYorkColors.yellow} data={data} />  
+
+
+      <SectionWrapper id="frontpage01">
+        <WhereIs data={data} />        
       </SectionWrapper>
+
+
       <SectionWrapper id="frontpage04" >
         <InstagramGrid bgColor={nyYorkColors.pink} />
       </SectionWrapper>
@@ -107,6 +115,14 @@ return (
         <FeatureAlternate bgColor={nyYorkColors.gray} color={nyYorkColors.yellow} data={data} />
         <Ad type="wear" />
       </SectionWrapper>
+      <SectionWrapper id="shop01">
+            <ShopTop />
+        </SectionWrapper>
+
+      <SectionWrapper id="shop03">
+            <ShopProducts  />
+        </SectionWrapper>
+
 
     </Layout>
 );

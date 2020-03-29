@@ -27,9 +27,12 @@ const OverlayMenu = ({ menuOpen, callback }) => {
               </Link>
           </li>
           <li className="nav-item" >
-              <Link to="/shop"  className="nav-link" activeClassName="nav-active">
-                  SHOP
-              </Link>
+           <a
+                href="https://nyyorkvintage.myshopify.com/"
+                className="nav-link"
+              >
+                SHOP
+              </a>
           </li>
           <li className="nav-item">
               <Link to="/omoss"  className="nav-link" activeClassName="nav-active">
