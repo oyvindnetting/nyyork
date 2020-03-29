@@ -95,7 +95,7 @@ return (
    
        <SectionWrapper id="frontpage03">
         <Feature color={nyYorkColors.pink} bgColor={nyYorkColors.yellow} data={data} />  
-        <Ad type="jeans" />
+        <Ad type="wear" />
       </SectionWrapper>
 
       <SectionWrapper id="frontpage01">
@@ -115,7 +115,7 @@ return (
 
       <SectionWrapper id="frontpage05">
         <FeatureAlternate bgColor={nyYorkColors.gray} color={nyYorkColors.yellow} data={data} />
-        <Ad type="wear" />
+        <Ad type="jeans" />
       </SectionWrapper>
       <SectionWrapper id="shop01">
             <ShopTop />
