@@ -10,7 +10,7 @@ const Feature = ({color, bgColor, data}) => {
     return(
         <FeatureWrapper color={color} bgColor={bgColor}>
         <div className="content">
-            <h2><span>FEATURE:</span>{data[0].node.acf.featureartikkel_1.post_title}</h2>
+            <h2>{data[0].node.acf.featureartikkel_1.post_title}</h2>
             <div>
                 {data[0].node.acf.featureartikkel_1.post_excerpt}
             </div>

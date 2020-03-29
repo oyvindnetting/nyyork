@@ -16,7 +16,7 @@ const FeatureAlternate = ({color, bgColor, data}) => {
                 <img src={featureBilde} alt={featureTitle} />
             </div>
             <div className="content">
-                <h2><span>FEATURE:</span>{featureTitle}</h2>
+                <h2>{featureTitle}</h2>
                 <div dangerouslySetInnerHTML={{ __html: featureExcerpt}}>
                 </div>
                 <Link to={featureLink}>LES MER</Link>

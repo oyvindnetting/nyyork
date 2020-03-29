@@ -10,6 +10,10 @@ import FacebookIcon from '../../images/facebook_icon_yellow.svg';
 import MailIcon from '../../images/mail_icon_yellow.svg';
 
 
+import {
+    EmailShareButton,
+    FacebookShareButton 
+} from "react-share";
 
 const postTemplate = ({ data: { post }}) => {
 
@@ -20,24 +24,29 @@ const postTemplate = ({ data: { post }}) => {
             <div className="container">
                 <div className="row" style={{ marginBottom: '40px' }}>
                     <PostWrapper className="col-lg-12">
-                    <div class="left">
-                            <div class="image">
+                    <div className="left">
+                            <div className="image">
                                 <img src={post.featured_media.localFile.childImageSharp.fluid.src} alt={post.featured_media.alt_text} />
         
                             </div>
-                            <div class="some">
+                            <div className="some">
                                 <h3>DEL DENNE SAKEN</h3>
-                                <div class="logos">
+                                <div className="logos">
+                                
+                                <FacebookShareButton url={document.referrer}>
                                     <img src={FacebookIcon} alt="Facebook icon" />
+                                </FacebookShareButton>
+                                <EmailShareButton>
                                     <img src={MailIcon} alt="Mail icon" />
+                                </EmailShareButton>
                                 </div>
                             </div>
                         </div>
-                        <div class="right">
-                            <div class="heading">
-                                <div class="title">FEATURE: {post.title}</div>
+                        <div className="right">
+                            <div className="heading">
+                                <div className="title">{post.title}</div>
                             </div>
-                            <div class="body" dangerouslySetInnerHTML={{ __html: post.content }}>
+                            <div className="body" dangerouslySetInnerHTML={{ __html: post.content }}>
                             </div>
                         </div>
             

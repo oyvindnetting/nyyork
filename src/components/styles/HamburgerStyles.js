@@ -8,7 +8,7 @@ export const HamburgerButton = styled.div`
     left: 45%;
     top: 175px;
     width: 60px;
-    height: 70px;
+    height: 60px;
     cursor: pointer;
     transition: all 0.2s ease;
 	outline: none;

@@ -9,7 +9,7 @@ background-color: ${nyYorkColors.gray};
         display: flex;
         flex-direction: row;
         @media screen and (max-width: 415px) {
-            flex-direction: column;
+            flex-direction: column-reverse;
         }
          div.left {
              width: 50%;
@@ -19,19 +19,23 @@ background-color: ${nyYorkColors.gray};
              div.image {
 				z-index: 0;
                  img {
+                    @media screen and (min-width: 415px) {
 					 position: absolute;
 					 top: 0;
 					 left: 0;
-		
+                     }
                      width: 100%;
                  }
              }
              div.some {
 				z-index: 100;
-				text-align: right;
-				position: absolute;
-				top: 60%;
-				left: 0;
+                text-align: center;
+                @media screen and (min-width: 415px) {
+                    text-align: right;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
 				
                 background-color: ${nyYorkColors.gray};
 		
@@ -55,7 +59,9 @@ background-color: ${nyYorkColors.gray};
 			z-index: 100;
 			background-color: rgba(0,0,0,0.7);
              width: 50%;
+             margin-top: 40%;
              @media screen and (max-width: 415px) {
+                margin-top: 10%;
                  width: 100%;
              }
              div.heading {

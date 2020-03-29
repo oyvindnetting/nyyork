@@ -48,7 +48,6 @@ const Header = () => {
               <a
                 href="https://nyyorkvintage.myshopify.com/"
                 className="nav-link"
-                activeClassName="nav-active"
               >
                 SHOP
               </a>
