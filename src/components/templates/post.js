@@ -8,18 +8,18 @@ import { PostWrapper } from './styles/PostWrapper';
 
 import FacebookIcon from '../../images/facebook_icon_yellow.svg';
 import MailIcon from '../../images/mail_icon_yellow.svg';
-
+import { location } from '@reach/router';
 
 import {
     EmailShareButton,
     FacebookShareButton 
 } from "react-share";
 
-const postTemplate = ({ data: { post }}) => {
-    const url = typeof window !== 'undefined' ? window.location.href : '';
+const postTemplate = ({ data: { post }, location}) => {
+    const url = location.href ? location.href : '';
     return(
         <Layout>
-            <SEO title="Feature" keywords={['ny york', 'vintage', 'wear']} />
+            <SEO title={post.title} keywords={['ny york', 'vintage', 'wear']} />
 
             <div className="container">
                 <div className="row" style={{ marginBottom: '40px' }}>
@@ -32,7 +32,6 @@ const postTemplate = ({ data: { post }}) => {
                             <div className="some">
                                 <h3>DEL DENNE SAKEN</h3>
                                 <div className="logos">
-                                
                                 <FacebookShareButton url={url}>
                                     <img src={FacebookIcon} alt="Facebook icon" />
                                 </FacebookShareButton>
@@ -43,6 +42,8 @@ const postTemplate = ({ data: { post }}) => {
                             </div>
                         </div>
                         <div className="right">
+    
+
                             <div className="heading">
                                 <div className="title">{post.title}</div>
                             </div>

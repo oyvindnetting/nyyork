@@ -5,10 +5,10 @@ export const HamburgerButton = styled.div`
     position: absolute;
     display: block;
     z-index: 1000;
-    left: 45%;
-    top: 175px;
-    width: 60px;
-    height: 60px;
+    left: 40%;
+    top: 135px;
+    width: 80px;
+    height: 80px;
     cursor: pointer;
     transition: all 0.2s ease;
 	outline: none;

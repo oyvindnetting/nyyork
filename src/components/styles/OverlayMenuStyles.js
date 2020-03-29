@@ -24,6 +24,7 @@ export const Overlay = styled.div`
     height: 100%;
     color: #fff;
     padding: 20px;
+    padding-top: 20%;
 
     .whiteLogo {
       max-width: 300px;
@@ -37,7 +38,7 @@ export const Overlay = styled.div`
       padding: 0;
 
       li {
-        margin: 0 0 20px 0;
+        margin: 0 0 0px 0;
       }
 
       li.overlayActive {
@@ -50,7 +51,7 @@ export const Overlay = styled.div`
         text-decoration: none;
         font-family: 'Poppins', 'Open Sans', Arial, Helvetica, sans-serif;
         font-weight: 500;
-        font-size: 2.2rem;
+        font-size: 2rem;
         -webkit-text-stroke-width: 2px;
         -webkit-text-stroke-color: ${nyYorkColors.yellow};
         color: ${nyYorkColors.gray} !important;
