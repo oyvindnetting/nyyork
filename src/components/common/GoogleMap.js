@@ -28,6 +28,7 @@ export class MapContainer extends Component {
           <Map
             google={this.props.google}
             zoom={15}
+            styles={mapStyles()}
             initialCenter={{ lat: 59.921, lng: 10.761}}
           >
             {this.displayMarkers()}
@@ -37,12 +38,11 @@ export class MapContainer extends Component {
   }
 
   export default GoogleApiWrapper({
-    apiKey: 'AIzaSyB-_NUeSCTv7QkKTINZcxv09diW288VGCI',
-    styles: this.mapStyles()
+    apiKey: 'AIzaSyB-_NUeSCTv7QkKTINZcxv09diW288VGCI'
   })(MapContainer);
 
 
-  mapStyles = () => {
+  const mapStyles = () => {
     return [
       {
         "elementType": "geometry",
