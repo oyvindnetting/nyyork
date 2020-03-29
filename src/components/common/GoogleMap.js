@@ -8,7 +8,8 @@ export class MapContainer extends Component {
       super(props);
   
       this.state = {
-        stores: [{lat: 59.9212761, lng: 10.7614716}]
+        stores: [{lat: 59.9212761, lng: 10.7614716},
+            {latitude: 59.9212761, longitude: 10.7614716},]
       }
     }
   
@@ -26,7 +27,7 @@ export class MapContainer extends Component {
       return (
           <Map
             google={this.props.google}
-            zoom={8}
+            zoom={14}
             style={mapStyles}
             initialCenter={{ lat: 59.921, lng: 10.761}}
           >
