@@ -97,20 +97,22 @@ return (
         <Feature color={nyYorkColors.pink} bgColor={nyYorkColors.yellow} data={data} />  
         <Ad type="jeans" />
       </SectionWrapper>
+
+      <SectionWrapper id="frontpage01">
+        <WhereIs data={data} />        
+      </SectionWrapper>
       <SectionWrapper id="frontpage02">
         <OpeningHours  color="pink" store="wear" data={data} />
         <WhoWeAre data={data} />
       </SectionWrapper>
 
 
-      <SectionWrapper id="frontpage01">
-        <WhereIs data={data} />        
-      </SectionWrapper>
 
 
       <SectionWrapper id="frontpage04" >
         <InstagramGrid bgColor={nyYorkColors.pink} />
       </SectionWrapper>
+
       <SectionWrapper id="frontpage05">
         <FeatureAlternate bgColor={nyYorkColors.gray} color={nyYorkColors.yellow} data={data} />
         <Ad type="wear" />
