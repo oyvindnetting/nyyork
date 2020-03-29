@@ -24,7 +24,13 @@ export const WhereIsWrapper = styled.div`
             left:0;
             top:0;
             z-index: -1;
-            width: 100%;
+            width: 60%;
+            @media screen and (max-width: 768px){
+                transform: rotate(90deg);
+                position:relative;
+                width: 160%;
+                left:-30%;
+            }
             img {
                 width: 100%;
             }
@@ -37,9 +43,15 @@ export const WhereIsWrapper = styled.div`
             width: 65%;
             height: 63%;
             border: 30px solid #66768c;
+            @media screen and (max-width: 768px){
+                border: 10px solid #66768c;
+                width: 140%;
+                overflow: hidden;
+         
+            }
         }
         @media screen and (max-width: 1200px){
-            background: url(${bgImageTablet});
+       
             background-size:100%;  
             background-position-x: center;
             margin: 50px 0;
@@ -51,7 +63,7 @@ export const WhereIsWrapper = styled.div`
 
         }
         @media screen and (max-width: 415px){
-            background: url(${bgImageMobile});
+       
             padding-bottom: 400px;
             background-size: cover;
             background-repeat: no-repeat;
@@ -65,9 +77,13 @@ export const WhereIsWrapper = styled.div`
             padding: 80px 25px;
             z-index: 20;
             width: 40%;
+            
             @media screen and (max-width: 768px){
-                
-                padding: 40px 25px;
+                background-color: rgba(100,100,100,0.5);
+         
+                           
+                width: 100%;
+                margin: 200px 0;
             }
              
             a {
@@ -109,7 +125,7 @@ export const WhereIsWrapper = styled.div`
                 }
                 @media screen and (max-width: 415px){
                     font-size: 0.9rem;
-                    padding: 10px;
+     
                 }
                 @media screen and (max-width: 320px){
                     font-size: 0.9rem;
