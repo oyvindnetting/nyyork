@@ -112,6 +112,10 @@ export const WhereIsWrapper = styled.div`
 
                 font-size: .9rem;
                 color: ${nyYorkColors.black};
+                @media screen and (max-width: 768px) {
+                    color: ${nyYorkColors.yellow};
+
+                }
                 font-weight: bold;
 
                 a {
