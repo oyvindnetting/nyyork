@@ -36,8 +36,12 @@ section {
   padding: 0;
 }
 
+a{
+  color: $yellow;
+}
 a:hover {
   text-decoration: none;
+  color: $pink;
 }
 
 header {
