@@ -15,7 +15,7 @@ export class MapContainer extends Component {
   
     displayMarkers = () => {
       return this.state.stores.map((store, index) => {
-        return <Marker key={index} id={index} position={{
+        return <Marker key={index} id={index} name={"Ny York Vintage"} position={{
          lat: store.latitude,
          lng: store.longitude
        }}

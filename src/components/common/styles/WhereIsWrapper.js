@@ -79,13 +79,11 @@ export const WhereIsWrapper = styled.div`
             padding: 80px 25px;
             z-index: 20;
             width: 40%;
-            
+          
             @media screen and (max-width: 768px){
-                background-color: rgba(0,0,0,0.7);
-         
-                           
+                margin-top: -420px;
                 width: 100%;
-                margin: 200px 0;
+      
             }
              
             a {
@@ -114,10 +112,7 @@ export const WhereIsWrapper = styled.div`
 
                 font-size: .9rem;
                 color: ${nyYorkColors.black};
-                @media screen and (max-width: 768px) {
-                    color: ${nyYorkColors.yellow};
-
-                }
+              
                 font-weight: bold;
 
                 a {
