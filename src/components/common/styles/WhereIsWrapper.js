@@ -41,7 +41,7 @@ export const WhereIsWrapper = styled.div`
             top:7%;
             z-index: -3;
             width: 65%;
-            height: 63%;
+            height: 80%;
             border: 30px solid #66768c;
             @media screen and (max-width: 768px){
                 border: 10px solid #66768c;
@@ -145,7 +145,7 @@ export const WhereIsWrapper = styled.div`
         }
 
         &:after {
-                padding-top: 10%;
+                padding-top: 20%;
                 @media screen and (max-width: 1200px){ 
                     padding-top: 20%;
                 }
