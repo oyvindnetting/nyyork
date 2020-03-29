@@ -16,7 +16,7 @@ import {
 } from "react-share";
 
 const postTemplate = ({ data: { post }}) => {
-
+    const url = typeof window !== 'undefined' ? window.location.href : '';
     return(
         <Layout>
             <SEO title="Feature" keywords={['ny york', 'vintage', 'wear']} />
@@ -33,7 +33,7 @@ const postTemplate = ({ data: { post }}) => {
                                 <h3>DEL DENNE SAKEN</h3>
                                 <div className="logos">
                                 
-                                <FacebookShareButton url={document.referrer}>
+                                <FacebookShareButton url={url}>
                                     <img src={FacebookIcon} alt="Facebook icon" />
                                 </FacebookShareButton>
                                 <EmailShareButton>
