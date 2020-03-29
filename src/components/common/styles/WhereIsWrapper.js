@@ -46,7 +46,9 @@ export const WhereIsWrapper = styled.div`
             @media screen and (max-width: 768px){
                 border: 10px solid #66768c;
                 width: 140%;
+                height: 100%;
                 overflow: hidden;
+                max-height: 800px;
          
             }
         }
@@ -79,7 +81,7 @@ export const WhereIsWrapper = styled.div`
             width: 40%;
             
             @media screen and (max-width: 768px){
-                background-color: rgba(100,100,100,0.5);
+                background-color: rgba(0,0,0,0.7);
          
                            
                 width: 100%;
