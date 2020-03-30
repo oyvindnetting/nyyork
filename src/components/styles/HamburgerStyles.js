@@ -5,13 +5,13 @@ export const HamburgerButton = styled.div`
     position: absolute;
     display: block;
     z-index: 1000;
-    left: 40%;
+    right: 10%;
     top: 135px;
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     cursor: pointer;
     transition: all 0.2s ease;
-	outline: none;
+  	outline: none;
     :hover {
       transform: scale(1.2);
     }
