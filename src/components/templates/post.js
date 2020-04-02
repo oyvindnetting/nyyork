@@ -24,9 +24,9 @@ const postTemplate = ({ data: { post }, location}) => {
             <title>Page 1</title>
             <meta name="description" content="Ny York Vintage" />
             <meta property="og:title" content={post.title} />
-            <meta property="og:image" content={post.featured_media.localFile.childImageSharp.fluid.src}  />
+   
           </MetaTags>
-            <SEO title={post.title} keywords={['ny york', 'vintage', 'wear']} ogImage={post.featured_media.localFile.childImageSharp.fluid.src}  />
+            <SEO title={post.title} keywords={['ny york', 'vintage', 'wear']} image={post.featured_media.localFile.childImageSharp.fluid.src}  />
 
             <div className="container">
                 <div className="row" style={{ marginBottom: '40px' }}>

@@ -89,7 +89,7 @@ const IndexPage = () => {
     `);
 return (
     <Layout>
-      <SEO title="Home" keywords={['ny york', 'vintage', 'jeans', 'shades']} />
+      <SEO title="Home" keywords={['ny york', 'vintage', 'jeans', 'shades']} data={data} />
     
        <ImageCarousel id="carousel" /> 
    
