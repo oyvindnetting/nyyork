@@ -73,7 +73,7 @@ background-color: ${nyYorkColors.gray};
                  }
                  div.title {
                      font-family: 'Poppins', 'Open Sans', Arial, Helvetica, sans-serif;
-                     font-weight:200;
+                     font-weight:700;
                      font-style: italic;
                      color: ${nyYorkColors.black};
                      font-size: 4rem;
