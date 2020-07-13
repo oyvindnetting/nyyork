@@ -35,6 +35,7 @@ const InstagramGrid = ({bgColor, nextInsta}) => {
     }
     `);
 
+    
     var lastFourImages = (nextInsta === 'next_four') ?  instaImages.slice(5,9) : instaImages.slice(0,4);
         
     return(
