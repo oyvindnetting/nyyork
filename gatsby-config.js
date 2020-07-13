@@ -31,13 +31,13 @@ module.exports = {
     {
       resolve: 'gatsby-source-wordpress',
       options: {
-        includedRoutes: ["/*/*/posts", "/*/*/media", '/*/*/acf'],
+        includedRoutes: ["**/posts", "**/media", '**/acf'],
         baseUrl: 'admin.nyyork.no',
-        protocol: 'https',
+        protocol: 'http',
         hostingWPCOM: false,
         useACF: true,
         searchAndReplaceContentUrls: {
-          sourceUrl: 'https://admin.nyyork.no',
+          sourceUrl: 'http://admin.nyyork.no',
           replacementUrl: '',
         },
       },
