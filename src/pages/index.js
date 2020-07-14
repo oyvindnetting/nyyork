@@ -20,8 +20,7 @@ import FeatureAlternate from '../components/common/FeatureAlternate';
 
 import { SectionWrapper } from '../components/common/SectionWrapper';
 
-import ShopTop from '../components/shop/ShopTop';
-import ShopProducts from '../components/shop/ShopProducts';
+
 
 
 const IndexPage = () => {
@@ -117,13 +116,7 @@ return (
         <FeatureAlternate bgColor={nyYorkColors.gray} color={nyYorkColors.yellow} data={data} />
         <Ad type="jeans" />
       </SectionWrapper>
-      <SectionWrapper id="shop01">
-            <ShopTop />
-        </SectionWrapper>
 
-      <SectionWrapper id="shop03">
-            <ShopProducts  />
-        </SectionWrapper>
 
 
     </Layout>
