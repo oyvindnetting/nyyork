@@ -45,7 +45,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-instagram',
         options: {
-          username: 'vintagewearbyny'
+          username: '1697713321'
         },
     },
     `gatsby-plugin-transition-link`,
