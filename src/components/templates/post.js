@@ -18,6 +18,9 @@ import {
 
 const postTemplate = ({ data: { post }, location}) => {
     const url = location.href ? location.href : '';
+
+    const featuredmedia = post.featured_media ? post.featured_media : null;
+
     return(
         <Layout>
            <MetaTags>
@@ -26,6 +29,8 @@ const postTemplate = ({ data: { post }, location}) => {
             <meta property="og:title" content={post.title} />
    
           </MetaTags>
+
+            
             <SEO title={post.title} keywords={['ny york', 'vintage', 'wear']} image={url+post.featured_media.localFile.childImageSharp.fluid.src}  />
 
             <div className="container">
@@ -33,7 +38,9 @@ const postTemplate = ({ data: { post }, location}) => {
                     <PostWrapper className="col-lg-12">
                     <div className="left">
                             <div className="image">
+
                                 <img src={post.featured_media.localFile.childImageSharp.fluid.src} alt={post.featured_media.alt_text} />
+
         
                             </div>
                             <div className="some">

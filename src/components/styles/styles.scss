@@ -21,7 +21,9 @@ body {
   overscroll-behavior: none;
   background-color: #605b63;
   @media screen and (min-width: 415px) {
-    background: url("../../images/background.jpg") no-repeat bottom center fixed;
+    background: url("../../images/background.jpg");
+    background-size: cover;
+    background-repeat: repeat-y;
     
   }
   
