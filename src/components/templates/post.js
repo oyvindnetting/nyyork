@@ -8,7 +8,7 @@ import { PostWrapper } from './styles/PostWrapper';
 
 import FacebookIcon from '../../images/facebook_icon_yellow.svg';
 import MailIcon from '../../images/mail_icon_yellow.svg';
-import { location } from '@reach/router';
+
 import MetaTags from 'react-meta-tags';
 
 import {
@@ -19,7 +19,6 @@ import {
 const postTemplate = ({ data: { post }, location}) => {
     const url = location.href ? location.href : '';
 
-    const featuredmedia = post.featured_media ? post.featured_media : null;
 
     return(
         <Layout>
@@ -31,7 +30,7 @@ const postTemplate = ({ data: { post }, location}) => {
           </MetaTags>
 
             
-            <SEO title={post.title} keywords={['ny york', 'vintage', 'wear']} image={url+post.featured_media.localFile.childImageSharp.fluid.src}  />
+            <SEO title={post.title} keywords={['ny york', 'vintage', 'wear']} object={url+post.featured_media.localFile.childImageSharp.fluid.src}  />
 
             <div className="container">
                 <div className="row" style={{ marginBottom: '40px' }}>

@@ -22,87 +22,29 @@ import { SectionWrapper } from '../components/common/SectionWrapper';
 
 
 
-
 const IndexPage = () => {
-  const {
-      data: { edges: data },
-    } = useStaticQuery(graphql`
-        query frontpage {
-            data:  allWordpressAcfForside {
-                edges {
-                    node {
-                        acf {
-                          apningstider_jeans
-                          apningstider_wear
-                          hvor_ligger_nyyork_overskrift
-                          hvor_ligger_nyyork_tekst
-                          featureartikkel_1 {
-                              post_title
-                              post_excerpt
-                              post_name
-                      
-                          }
-                          featurebilde1_liten {
-                              id
-                              localFile {
-                                  childImageSharp {
-                                      fluid(quality: 100, maxWidth:415) {
-                                        src
-                                      }
-                                  }
-                              }
-                          }
-                          featureartikkel_2 {
-                              post_title
-                              post_excerpt
-                              post_name
-                      
-                          }
-                          featurebilde2_liten {
-                              id
-                              localFile {
-                                  childImageSharp {
-                                      fluid(quality: 100, maxWidth:415) {
-                                        src
-                                      }
-                                  }
-                              }
-                          }
-                          hvem_er_vi_overskrift
-                          hvem_er_vi_tekst
-                          hvem_er_vi_bilde {
-                              id
-                              localFile {
-                                  childImageSharp {
-                                      fluid(quality: 100, maxWidth:415) {
-                                          src
-                                      }
-                                  }
-                              }
-                          }
-                        }
-                    }
-                }
-            }
-        }
-    `);
+  const data = useStaticQuery(myQuery);
+  const frontpage = data.frontpage.edges
+  const generalinfo = data.generalinfo.edges
+
+
 return (
     <Layout>
-      <SEO title="Home" keywords={['ny york', 'vintage', 'jeans', 'shades']} data={data} />
+      <SEO title="Home" keywords={['ny york', 'vintage', 'jeans', 'shades']} data={frontpage} />
     
        <ImageCarousel id="carousel" /> 
    
        <SectionWrapper id="frontpage03">
-        <Feature color={nyYorkColors.pink} bgColor={nyYorkColors.yellow} data={data} />  
+        <Feature color={nyYorkColors.pink} bgColor={nyYorkColors.yellow} data={frontpage} />  
         <Ad type="wear" />
       </SectionWrapper>
 
       <SectionWrapper id="frontpage01">
-        <WhereIs data={data} />        
+        <WhereIs data={generalinfo} />        
       </SectionWrapper>
       <SectionWrapper id="frontpage02">
-        <OpeningHours  color="pink" store="wear" data={data} />
-        <WhoWeAre data={data} />
+        <OpeningHours  color="pink" store="wear" data={generalinfo} />
+        <WhoWeAre data={frontpage} />
       </SectionWrapper>
 
 
@@ -113,7 +55,7 @@ return (
       </SectionWrapper>
 
       <SectionWrapper id="frontpage05">
-        <FeatureAlternate bgColor={nyYorkColors.gray} color={nyYorkColors.yellow} data={data} />
+        <FeatureAlternate bgColor={nyYorkColors.gray} color={nyYorkColors.yellow} data={frontpage} />
         <Ad type="jeans" />
       </SectionWrapper>
 
@@ -124,3 +66,75 @@ return (
 }
 
 export default IndexPage;
+
+export const myQuery = graphql`
+query {
+  frontpage: allWordpressAcfForside {
+    edges {
+        node {
+          acf {
+
+            featureartikkel_1 {
+                post_title
+                post_excerpt
+                post_name
+        
+            }
+            featurebilde1_liten {
+                id
+                localFile {
+                    childImageSharp {
+                        fluid(quality: 100, maxWidth:415) {
+                          src
+                        }
+                    }
+                }
+            }
+            featureartikkel_2 {
+                post_title
+                post_excerpt
+                post_name
+        
+            }
+            featurebilde2_liten {
+                id
+                localFile {
+                    childImageSharp {
+                        fluid(quality: 100, maxWidth:415) {
+                          src
+                        }
+                    }
+                }
+            }
+            hvem_er_vi_overskrift
+            hvem_er_vi_tekst
+            hvem_er_vi_bilde {
+                id
+                localFile {
+                    childImageSharp {
+                        fluid(quality: 100, maxWidth:415) {
+                            src
+                        }
+                    }
+                }
+            }
+          }
+        }
+    }
+  }
+
+  generalinfo: allWordpressAcfGeneralinfo {
+    edges {
+      node {
+        acf {
+          apningstider_jeans
+          hvor_er_ny_york_overskrift
+          hvor_er_ny_york_tekst
+          apningstider_wear
+        }
+      }
+    }
+  }
+}
+
+`;

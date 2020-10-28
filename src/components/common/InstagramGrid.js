@@ -40,7 +40,7 @@ const InstagramGrid = ({bgColor, nextInsta}) => {
     return(
     <InstagramWrapper bgColor={bgColor}>
         <div className="heading">
-            <span><a href="https://www.instagram.com/vintagewearbyny/" target="_blank">@vintagewearbyny</a></span>
+            <span><a href="https://www.instagram.com/vintagewearbyny/" target="new">@vintagewearbyny</a></span>
         </div>
         <div className="insta_wrapper">
 

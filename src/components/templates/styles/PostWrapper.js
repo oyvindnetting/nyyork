@@ -1,7 +1,7 @@
 
 import styled from 'styled-components';
 import nyYorkColors from '../../constants/colors';
-import { dropShadow } from '../../common/mixins';
+
 
 export const PostWrapper = styled.article`
 

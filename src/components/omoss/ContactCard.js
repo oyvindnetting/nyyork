@@ -3,8 +3,7 @@ import { ContactCardWrapper } from './styles/ContactCardWrapper';
 
 const ContactCard = () => (
     <ContactCardWrapper className="contact_info">
-            <h2>KONTAKT OSS</h2>
-            <div className="name">NY YORK VINTAGE</div>
+            <h2>NY YORK VINTAGE</h2>
             <div className="address">
                 Thorvald Meyers gate 50 <br />
                 Oslo, Norway <br /><br />

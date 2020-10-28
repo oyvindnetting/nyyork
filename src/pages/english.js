@@ -16,55 +16,20 @@ import '../components/styles/styles.scss';
 
 
 const EnglishPage = () => {
-    const {
-        data: { edges: data },
-      } = useStaticQuery(graphql`
-          query english {
-              data:  allWordpressAcfEnglish {
-                  edges {
-                      node {
-                          acf {
-                            
-                            hvor_ligger_nyyork_overskrift
-                            hvor_ligger_nyyork_tekst
-                            hvem_er_vi_overskrift
-                            hvem_er_vi_tekst
-                            hvem_er_vi_bilde {
-                                id
-                                localFile {
-                                    childImageSharp {
-                                        fluid(quality: 100, maxHeight:350) {
-                                            src
-                                        }
-                                    }
-                                }
-							}
-							toppbilde {
-								localFile {
-									childImageSharp {
-                                        fluid(quality: 100, maxWidth:1200) {
-                                            src
-                                        }
-                                    }
-								}
-							}
-                          }
-                      }
-                  }
-              }
-          }
-      `);
+    const data = useStaticQuery(myQuery);
+    const english = data.english.edges
+
     return (
         (
             <Layout>
                 <SEO title="English" keywords={['ny york', 'vintage', 'wear']} />
         
                 <SectionWrapper id="omoss01">
-                    <AboutUsTop data={data} />
+                    <AboutUsTop data={english} />
                 </SectionWrapper>
         
                 <SectionWrapper id="omoss02">
-                    <WhoWeAre color="pink" topMargin="50px" data={data} />
+                    <WhoWeAre color="pink" topMargin="50px" data={english} />
                 </SectionWrapper>
                 
                 <SectionWrapper id="omoss03">
@@ -74,7 +39,7 @@ const EnglishPage = () => {
                 </SectionWrapper>
         
                 <SectionWrapper id="omoss04">
-                    <WhereIs data={data}  />
+                    <WhereIs data={english}  />
                 </SectionWrapper>
         
                 <SectionWrapper id="omoss06">
@@ -89,3 +54,52 @@ const EnglishPage = () => {
     )
 }
 export default EnglishPage;
+
+
+export const myQuery = graphql`
+query {
+    english:  allWordpressAcfEnglish {
+    edges {
+        node {
+            acf {
+              
+              hvem_er_vi_overskrift
+              hvem_er_vi_tekst
+              hvem_er_vi_bilde {
+                  id
+                  localFile {
+                      childImageSharp {
+                          fluid(quality: 100, maxHeight:350) {
+                              src
+                          }
+                      }
+                  }
+              }
+              toppbilde {
+                  localFile {
+                      childImageSharp {
+                          fluid(quality: 100, maxWidth:1200) {
+                              src
+                          }
+                      }
+                  }
+              }
+            }
+        }
+    }
+}
+  generalinfo: allWordpressAcfGeneralinfo {
+    edges {
+      node {
+        acf {
+          apningstider_jeans
+          hvor_er_ny_york_overskrift
+          hvor_er_ny_york_tekst
+          apningstider_wear
+        }
+      }
+    }
+  }
+}
+
+`;

@@ -15,8 +15,12 @@ const Footer = () => {
                 Oslo, Norway<br />
             </div>
             <div className="some">
+            <a href="https://www.facebook.com/nyyorkoslo/" target="new">
                 <img src={FacebookIcon} alt="Facebook" />
+            </a>
+            <a href="https://www.instagram.com/vintagewearbyny/" target="new">
                 <img src={InstaIcon} alt="Instagram" />
+            </a>
             </div>
         </div>
         <div className="bottom">

@@ -1,29 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useStaticQuery, graphql } from 'gatsby';
 import { OpeningHoursWrapper } from './styles/OpeningHoursWrapper';
 
-const OpeningHours = ({color, store}) => {
+const OpeningHours = ({color, store, data}) => {
 
-    
 
-    const {
-        data: { edges: data },
-    } = useStaticQuery(graphql`
-        query apningstider {
-            data:  allWordpressAcfForside {
-                edges {
-                    node {
-                        acf {
-                            apningstider_wear
-                            apningstider_jeans
-                            
-                        }
-                    }
-                }
-            }
-        }
-    `);
     return (
         <OpeningHoursWrapper color={color}>
         {(store === 'wear') ? 

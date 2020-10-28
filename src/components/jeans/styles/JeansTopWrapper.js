@@ -1,7 +1,7 @@
 
 
 import styled from 'styled-components';
-import jeansTopBackground from '../../../images/jeans_top_background.jpg';
+
 
 export const JeansTopWrapper = styled.div`
 

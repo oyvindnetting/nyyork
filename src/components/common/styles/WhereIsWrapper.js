@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-import bgImage from '../../../images/whereis_background.png';
-import bgImageTablet from '../../../images/mobile_whereis_background.png';
-import bgImageMobile from '../../../images/mobile_whereis_background_415.png';
-
 import nyYorkColors from '../../constants/colors';
 
 export const WhereIsWrapper = styled.div`

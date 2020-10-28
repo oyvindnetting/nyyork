@@ -1,7 +1,6 @@
 
 
 import styled from 'styled-components';
-import wearTopBackground from '../../../images/wear_top_background.jpg';
 
 export const WearTopWrapper = styled.div`
 

@@ -1,8 +1,13 @@
 import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import StoreAdJeansImage from '../../images/store_jeans.jpg';
 import { StoreAdJeansWrapper } from './styles/StoreAdJeansWrapper';
 
-const StoreAdJeans = () => (
+const StoreAdJeans = () => {
+    const data = useStaticQuery(myQuery);
+    const generalinfo = data.generalinfo.edges
+
+    return (   
     <StoreAdJeansWrapper>
         <div className="image">
             <img src={StoreAdJeansImage} alt="Jeans Store" />
@@ -11,9 +16,7 @@ const StoreAdJeans = () => (
             <h3>VINTAGE JEANS</h3>
 
             <span>Åpningstider</span>
-            Mandag, Torsdag, <br />
-            Fredag, Lørdag<br />
-            14.00–18.00<br />
+            <div dangerouslySetInnerHTML={{ __html: generalinfo[0].node.acf.apningstider_jeans }}></div>
 
             <span>Besøksadresse</span>
 
@@ -21,7 +24,25 @@ const StoreAdJeans = () => (
             Oslo, Norway
 
         </div>
-    </StoreAdJeansWrapper>
-);
+    </StoreAdJeansWrapper>)
+}
+
 
 export default StoreAdJeans;
+
+
+export const myQuery = graphql`
+query {
+
+  generalinfo: allWordpressAcfGeneralinfo {
+    edges {
+      node {
+        acf {
+          apningstider_jeans
+        }
+      }
+    }
+  }
+}
+
+`;

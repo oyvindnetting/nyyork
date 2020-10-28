@@ -1,7 +1,7 @@
 
 
 import styled from 'styled-components';
-import omOssTopBackground from '../../../images/omoss_top_background.jpg';
+
 import { dropShadow } from '../../common/mixins';
 
 export const OmOssTopWrapper = styled.div`

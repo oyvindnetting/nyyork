@@ -11,7 +11,7 @@ import ContactCard from '../components/omoss/ContactCard';
 import WhereIs from '../components/common/WhereIs';
 import StoreAdWear from '../components/omoss/StoreAdWear';
 import StoreAdJeans from '../components/omoss/StoreAdJeans';
-import ContactForm from '../components/omoss/ContactForm';
+
 
 import '../components/styles/styles.scss';
 import  nyYorkColors from '../components/constants/colors';
@@ -20,56 +20,22 @@ import  nyYorkColors from '../components/constants/colors';
 
 
 const OmOssPage = () => {
-    const {
-        data: { edges: data },
-      } = useStaticQuery(graphql`
-          query omoss {
-              data:  allWordpressAcfOmoss {
-                  edges {
-                      node {
-                          acf {
-                            
-                            hvor_ligger_nyyork_overskrift
-                            hvor_ligger_nyyork_tekst
-                            hvem_er_vi_overskrift
-                            hvem_er_vi_tekst
-                            hvem_er_vi_bilde {
-                                id
-                                localFile {
-                                    childImageSharp {
-                                        fluid(quality: 100, maxWidth:415) {
-                                            src
-                                        }
-                                    }
-                                }
-							}
-							
-							toppbilde {
-								localFile {
-									childImageSharp {
-                                        fluid(quality: 100, maxWidth:1200) {
-                                            src
-                                        }
-                                    }
-								}
-							}
-                          }
-                      }
-                  }
-              }
-          }
-      `);
+
+    const data = useStaticQuery(myQuery);
+    const omoss = data.omoss.edges
+    const generalinfo = data.generalinfo.edges
+
 
     return (
         <Layout>
             <SEO title="Om oss" keywords={['ny york', 'vintage', 'wear']} />
     
             <SectionWrapper id="omoss01">
-                <OmOssTop data={data} />
+                <OmOssTop data={omoss} />
             </SectionWrapper>
     
             <SectionWrapper id="omoss02">
-                <WhoWeAre color="pink" data={data} />
+                <WhoWeAre color="pink" data={omoss} />
             </SectionWrapper>
     
             <SectionWrapper id="omoss03">
@@ -79,14 +45,10 @@ const OmOssPage = () => {
             </SectionWrapper>
             
             <SectionWrapper id="omoss04">
-                <WhereIs data={data} />
+                <WhereIs data={generalinfo} />
             </SectionWrapper>
     
-            <SectionWrapper id="omoss05">
-               <h2>KONTAKT OSS</h2>
-                <ContactForm />
-            </SectionWrapper>
-    
+
             <SectionWrapper id="omoss06">
      
                 <h2>VÅRE BUTIKKER</h2>
@@ -102,3 +64,56 @@ const OmOssPage = () => {
 
 
 export default OmOssPage;
+
+
+
+export const myQuery = graphql`
+query {
+  omoss: allWordpressAcfOmoss {
+    edges {
+        node {
+            acf {
+              
+              hvor_ligger_nyyork_overskrift
+              hvor_ligger_nyyork_tekst
+              hvem_er_vi_overskrift
+              hvem_er_vi_tekst
+              hvem_er_vi_bilde {
+                  id
+                  localFile {
+                      childImageSharp {
+                          fluid(quality: 100, maxWidth:415) {
+                              src
+                          }
+                      }
+                  }
+              }
+              
+              toppbilde {
+                  localFile {
+                      childImageSharp {
+                          fluid(quality: 100, maxWidth:1200) {
+                              src
+                          }
+                      }
+                  }
+              }
+            }
+        }
+    }
+  }
+  generalinfo: allWordpressAcfGeneralinfo {
+    edges {
+      node {
+        acf {
+          apningstider_jeans
+          hvor_er_ny_york_overskrift
+          hvor_er_ny_york_tekst
+          apningstider_wear
+        }
+      }
+    }
+  }
+}
+
+`;

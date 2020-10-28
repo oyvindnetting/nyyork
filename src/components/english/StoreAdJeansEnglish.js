@@ -1,27 +1,49 @@
 import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import StoreAdJeansImage from '../../images/store_jeans.jpg';
 import { StoreAdJeansWrapper } from './styles/StoreAdJeansWrapper';
 
-const StoreAdJeansEnglish = () => (
-    <StoreAdJeansWrapper>
-        <div class="image">
-            <img src={StoreAdJeansImage} alt="Jeans Store" />
-        </div>
-        <div class="content">
-            <h3>VINTAGE JEANS</h3>
+const StoreAdJeansEnglish = () => {
+    const data = useStaticQuery(myQuery);
+    const generalinfo = data.generalinfo.edges
 
-            <span>Opening hours</span>
-            Monday, Thursday, <br />
-            Friday, Saturday<br />
-            14.00–18.00<br />
+    return(    
+        <StoreAdJeansWrapper>
+            <div className="image">
+                <img src={StoreAdJeansImage} alt="Jeans Store" />
+            </div>
+            <div className="content">
+                <h3>VINTAGE JEANS</h3>
 
-            <span>Visiting address</span>
+                <span>Opening hours</span>
+                <div dangerouslySetInnerHTML={{ __html: generalinfo[0].node.acf.apningstider_jeans }}></div>
 
-            Rathkesgate 7<br />
-            Oslo, Norway
+                <span>Visiting address</span>
 
-        </div>
-    </StoreAdJeansWrapper>
-);
+                Rathkesgate 7<br />
+                Oslo, Norway
+
+            </div>
+        </StoreAdJeansWrapper>
+    )
+}
+
 
 export default StoreAdJeansEnglish;
+
+
+export const myQuery = graphql`
+query {
+
+  generalinfo: allWordpressAcfGeneralinfo {
+    edges {
+      node {
+        acf {
+          apningstider_jeans
+        }
+      }
+    }
+  }
+}
+
+`;

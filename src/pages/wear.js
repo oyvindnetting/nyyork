@@ -19,81 +19,31 @@ import  nyYorkColors from '../components/constants/colors';
 
 
 const WearPage = () => {
-    const {
-        data: { edges: data },
-      } = useStaticQuery(graphql`
-          query wear {
-              data:  allWordpressAcfWear {
-                  edges {
-                      node {
-                          acf {
-                            apningstider
-                            hvor_ligger_nyyork_overskrift
-                            hvor_ligger_nyyork_tekst
-                            featureartikkel_1 {
-                                post_title
-                                post_excerpt
-                                post_name
-                        
-                            }
-                            featurebilde1_liten {
-                                id
-                                localFile {
-                                    childImageSharp {
-                                        fluid(quality: 100, maxWidth:415) {
-                                            src
-                                        }
-                                    }
-                                }
-                            }
-                            hvem_er_vi_overskrift
-                            hvem_er_vi_tekst
-                            hvem_er_vi_bilde {
-                                id
-                                localFile {
-                                    childImageSharp {
-                                        fluid(quality: 100, maxWidth:415) {
-                                            src
-                                        }
-                                    }
-                                }
-							}
-							toppbilde {
-								localFile {
-									childImageSharp {
-                                        fluid(quality: 100, maxWidth:1200) {
-                                            src
-                                        }
-                                    }
-								}
-							}
-                          }
-                      }
-                  }
-              }
-          }
-      `);
+    const data = useStaticQuery(myQuery);
+    const wear = data.wear.edges
+    const generalinfo = data.generalinfo.edges
+  
 
     return (
         <Layout>
             <SEO title="Wear" keywords={['ny york', 'vintage', 'wear']} />
 
             <SectionWrapper id="wear01">
-                <WearTop data={data} />
+                <WearTop data={wear} />
             </SectionWrapper>
 
             <SectionWrapper id="wear02">
-                <OpeningHours color="pink" store="wear" data={data} />
-                <WhoWeAre data={data} />
+                <OpeningHours color="pink" store="wear" data={generalinfo} />
+                <WhoWeAre data={wear} />
             </SectionWrapper>
                 
             <SectionWrapper id="wear03">
-                <WhereIs data={data} />        
+                <WhereIs data={generalinfo} />        
             </SectionWrapper>
 
             <SectionWrapper id="wear04">
                 <Ad type="jeans" />
-                <FeatureAlternate color={nyYorkColors.yellow} bgColor={nyYorkColors.pink} data={data} />  
+                <FeatureAlternate color={nyYorkColors.yellow} bgColor={nyYorkColors.pink} data={wear} />  
             </SectionWrapper>
 
             <SectionWrapper id="wear05" >
@@ -106,3 +56,70 @@ const WearPage = () => {
 
 
 export default WearPage;
+
+
+export const myQuery = graphql`
+query {
+  wear: allWordpressAcfWear {
+    edges {
+        node {
+            acf {
+              apningstider
+              hvor_ligger_nyyork_overskrift
+              hvor_ligger_nyyork_tekst
+              featureartikkel_1 {
+                  post_title
+                  post_excerpt
+                  post_name
+          
+              }
+              featurebilde1_liten {
+                  id
+                  localFile {
+                      childImageSharp {
+                          fluid(quality: 100, maxWidth:415) {
+                              src
+                          }
+                      }
+                  }
+              }
+              hvem_er_vi_overskrift
+              hvem_er_vi_tekst
+              hvem_er_vi_bilde {
+                  id
+                  localFile {
+                      childImageSharp {
+                          fluid(quality: 100, maxWidth:415) {
+                              src
+                          }
+                      }
+                  }
+              }
+              toppbilde {
+                  localFile {
+                      childImageSharp {
+                          fluid(quality: 100, maxWidth:1200) {
+                              src
+                          }
+                      }
+                  }
+              }
+            }
+        }
+    }
+}
+  generalinfo: allWordpressAcfGeneralinfo {
+    edges {
+      node {
+        acf {
+          apningstider_jeans
+          hvor_er_ny_york_overskrift
+          hvor_er_ny_york_tekst
+          apningstider_wear
+        }
+      }
+    }
+  }
+}
+
+`;
