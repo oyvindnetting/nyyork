@@ -73,9 +73,7 @@ query {
     edges {
         node {
             acf {
-              
-              hvor_ligger_nyyork_overskrift
-              hvor_ligger_nyyork_tekst
+
               hvem_er_vi_overskrift
               hvem_er_vi_tekst
               hvem_er_vi_bilde {

@@ -64,9 +64,7 @@ query {
     edges {
         node {
             acf {
-              apningstider
-              hvor_ligger_nyyork_overskrift
-              hvor_ligger_nyyork_tekst
+
               featureartikkel_1 {
                   post_title
                   post_excerpt
