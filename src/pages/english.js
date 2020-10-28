@@ -19,6 +19,7 @@ const EnglishPage = () => {
     const data = useStaticQuery(myQuery);
     const english = data.english.edges
 
+
     return (
         (
             <Layout>
@@ -62,7 +63,8 @@ query {
     edges {
         node {
             acf {
-              
+              hvor_er_ny_york_overskrift
+              hvor_er_ny_york_tekst
               hvem_er_vi_overskrift
               hvem_er_vi_tekst
               hvem_er_vi_bilde {

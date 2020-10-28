@@ -7,8 +7,7 @@ import { WhereIsWrapper } from './styles/WhereIsWrapper'
 
 const WhereIs = ({data}) => {
 
-    console.log("Om oss Data")
-    console.log(data)
+
     return (
         <WhereIsWrapper >
         <div className="where_is_background">

@@ -15,7 +15,7 @@ export const WhoWeAreWrapper = styled.div`
         width: 70%;
         display: flex;
         flex-direction: row;
-        padding: 10px;
+        padding: 20px;
 
 
 

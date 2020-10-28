@@ -14,14 +14,14 @@ export const OpeningHoursWrapper = styled.div`
     background-repeat:no-repeat;
     background-size:100%;      
     position: relative;
-    padding: 50px 55px;
+    padding: 50px 50px;
 
     color: ${props => 
         ((props.color === 'pink') && nyYorkColors.beige) || ((props.color === 'gray') && nyYorkColors.beige) 
     };
     font-family: 'Poppins', 'Open Sans', Arial, Helvetica, sans-serif;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 
 
     @media screen and (max-width: 1200px){
