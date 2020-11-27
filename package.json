@@ -25,6 +25,7 @@
     "gatsby-source-shopify": "^3.0.51",
     "gatsby-source-wordpress": "^3.0.58",
     "gatsby-transformer-sharp": "^2.1.18",
+    "google-fonts-plugin": "2.0.2",
     "google-maps-react": "^2.0.2",
     "gsap": "^3.2.4",
     "intersection-observer": "^0.7.0",
